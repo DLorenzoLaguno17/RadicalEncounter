@@ -1,6 +1,6 @@
 # The Cliffborn Islands
 
-Go to our web page: https://goo.gl/SUk3ra.
+Go to our web page: 
 
 ## Controls
 

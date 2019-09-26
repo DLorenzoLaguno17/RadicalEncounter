@@ -1,0 +1,19 @@
+# Zuateke
+
+## Idea
+You are the ruler of a zombie night club, and you have to make the local grow.
+
+## Mechanics
+In order to improve your disco, you can spend money on:
+* Drinks.
+* Security.
+* Furniture.
+* Music Bands/DJ.
+* Tickets.
+* Cleaning staff.
+* Speakers.
+* Dress code.
+
+There will be different stats such as PRESTIGE, HAPPINESS, COMFORT...
+
+There also can be different events to add variation to the game.

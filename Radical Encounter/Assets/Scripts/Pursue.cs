@@ -8,12 +8,12 @@ public class Pursue : MonoBehaviour
     public float MaxPrediction = 2.0f;
 
     MovementManager Movement;
-    Arrive arribe;
+    Arrive arrive;
 
     void Start()
     {
         Movement = GetComponent<MovementManager>();
-        arribe = GetComponent<Arrive>();
+        arrive = GetComponent<Arrive>();
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class Pursue : MonoBehaviour
         Vector3 RealTarget = targ;
         RealTarget += TargVel * prediction;
 
-        arribe.Steer(RealTarget);
+        arrive.Steer(RealTarget);
         
     }
 

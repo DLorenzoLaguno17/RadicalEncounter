@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class MovementManager : MonoBehaviour
 {
     public GameObject target;
-    public GameObject aim;
-    public Slider arrow;
+    /*public GameObject aim;
+    public Slider arrow;*/
 
     public float MaximumSpeed = 5.0f;
     public float MaximumAcceleration = 0.1f;
@@ -66,11 +66,11 @@ public class MovementManager : MonoBehaviour
         Mathf.Clamp(rotation, -MaximumRotationSpeed, MaximumRotationSpeed);
 
         // Rotate the arrow
-        float angle = Mathf.Atan2(movement.x, movement.z);
-        aim.transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
+        //float angle = Mathf.Atan2(movement.x, movement.z);
+        //aim.transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
 
         // Strech it
-        arrow.value = movement.magnitude * 4;
+        //arrow.value = movement.magnitude * 4;
 
         // Final rotate
         transform.rotation *= Quaternion.AngleAxis(rotation * Time.deltaTime, Vector3.up);

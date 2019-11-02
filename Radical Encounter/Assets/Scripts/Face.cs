@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Face : MonoBehaviour
+public class Face : Behaviour
 {
     public float RotSpeed = 5.5f;
     MovementManager Movement;

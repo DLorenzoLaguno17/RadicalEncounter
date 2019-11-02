@@ -11,7 +11,6 @@ public class LookWhereGoing : Behaviour
     void Start()
     {
         Movement = GetComponent<MovementManager>();
-
     }
 
     // Update is called once per frame
@@ -28,5 +27,4 @@ public class LookWhereGoing : Behaviour
         Vector3 FinalOrientation = Vector3.RotateTowards(transform.forward, direction, step, 0.0f);
         transform.rotation = Quaternion.LookRotation(FinalOrientation);
     }
-
 }

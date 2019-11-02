@@ -1,7 +1,7 @@
 # Radical Encounter
-Radical encounter is a god game in which you are in charge of a group of activists that must defend their city against different amounts of enemy waves of soldiers.
+Radical encounter is a god game in which you are in charge of a group of activists that must defend the villagers of their city against different amounts of waves of enemy soldiers.
 
-Go to GitHub: 
+Go to our GitHub: https://github.com/DLorenzoLaguno17/RadicalEncounter
 
 ## Controls
 

@@ -5,10 +5,11 @@ using System.Collections;
 public class MoveToMouseClick : MonoBehaviour {
 
 	public LayerMask mask;
+	public int mouse_button = 0;
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButton(0))
+		if(Input.GetMouseButton(mouse_button))
 		{
 			RaycastHit hit;
 			Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);

@@ -28,6 +28,7 @@ public class Wanderer : MonoBehaviour
     {
         WanderOrientation += RandomBinomial() * WanderRate;
         float targetOrientation = WanderOrientation + Movement.rotation;
+
         Vector3 targetPosition = transform.position + (OrientationToVector(Movement.rotation) * WanderOffset);
         targetPosition = targetPosition + (OrientationToVector(targetOrientation) * WanderRadius);
         seek.Steer(targetPosition);

@@ -31,6 +31,12 @@ public class Wanderer : Behaviour
         Vector3 targetPosition = transform.position + (OrientationToVector(Movement.rotation) * WanderOffset);
         targetPosition = targetPosition + (OrientationToVector(targetOrientation) * WanderRadius);
         seek.Steer(targetPosition);
+
+        Vector3 output = targetPosition - transform.position;
+
+        output.Normalize();
+        output *= Movement.MaximumAcceleration;
+        Movement.AccelerateMovement(output, priority);
     }
 
     float RandomBinomial()

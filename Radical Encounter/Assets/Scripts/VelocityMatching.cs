@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VelocityMatching : MonoBehaviour
+public class VelocityMatching : Behaviour
 {
-
     MovementManager Movement;
 
     public float timetotarget = 0.1f;
@@ -32,7 +31,7 @@ public class VelocityMatching : MonoBehaviour
             output *= Movement.MaximumAcceleration;
         }
 
-        Movement.AccelerateMovement(output);
+        Movement.AccelerateMovement(output, priority);
 
     }
 }

@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seek : MonoBehaviour
+public class Seek : Behaviour
 {
-
     MovementManager Movement;
 
     void Start()
@@ -25,7 +24,7 @@ public class Seek : MonoBehaviour
         Vector3 output = targ - transform.position;
 
         Vector3 OutputAux = GiveMaxAccel(output);
-        Movement.AccelerateMovement(OutputAux);
+        Movement.AccelerateMovement(OutputAux, priority);
     }
 
     public Vector3 GiveMaxAccel(Vector3 vec)

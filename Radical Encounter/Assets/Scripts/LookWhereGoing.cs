@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookWhereGoing : MonoBehaviour
+public class LookWhereGoing : Behaviour
 {
     public float RotSpeed = 5.5f;
     MovementManager Movement;

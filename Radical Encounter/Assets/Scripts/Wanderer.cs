@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wanderer : MonoBehaviour
+public class Wanderer : Behaviour
 {
-
     public float WanderOffset = 1.5f;
     float WanderRadius = 4.0f;
     float WanderRate = 0.4f;

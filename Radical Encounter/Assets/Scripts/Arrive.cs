@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrive : MonoBehaviour
+public class Arrive : Behaviour
 {
-
     //float RadiusToTarget;
     public float SlowRadius = 5.0f;
     public float TimeToTarget = 0.1f;
@@ -34,11 +33,11 @@ public class Arrive : MonoBehaviour
 
         if(distance > SlowRadius)
         {
-            TargetSpeed = Movement.MaxaimumSpeed;
+            TargetSpeed = Movement.MaximumSpeed;
         }
         else
         {
-            TargetSpeed = Movement.MaxaimumSpeed * distance / SlowRadius;
+            TargetSpeed = Movement.MaximumSpeed * distance / SlowRadius;
         }
 
         Vector3 TargetVelocity = direction;
@@ -54,6 +53,6 @@ public class Arrive : MonoBehaviour
             output *= Movement.MaximumAcceleration;
         }
 
-        Movement.AccelerateMovement(output);
+        Movement.AccelerateMovement(output, priority);
     }
 }

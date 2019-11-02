@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flee : MonoBehaviour
+public class Flee : Behaviour
 {
     MovementManager Movement;
 
@@ -21,10 +21,10 @@ public class Flee : MonoBehaviour
         if (!Movement)
             Movement = GetComponent<MovementManager>();
 
-        Vector3 output = transform.position  - target;
+        Vector3 output = transform.position - target;
 
         Vector3 OutputAux = GiveMaxAccel(output);
-        Movement.AccelerateMovement(OutputAux);
+        Movement.AccelerateMovement(OutputAux, priority);
     }
 
     public Vector3 GiveMaxAccel(Vector3 vec)

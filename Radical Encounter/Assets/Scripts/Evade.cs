@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Evade : MonoBehaviour
+public class Evade : Behaviour
 {
-
     public float MaxPrediction = 2.0f;
 
     MovementManager Movement;

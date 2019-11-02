@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pursue : MonoBehaviour
+public class Pursue : Behaviour
 {
-
     public float MaxPrediction = 2.0f;
 
     MovementManager Movement;

@@ -6,11 +6,10 @@ public class MilitaryController : MonoBehaviour
 {
     MovementManager Movement;
     FollowPathMesh followPathMesh;
-    Pursue pursue;
+    Arrive arrive;
     DayAndNightCycle DnN;
     public LayerMask mask;
 
-    bool IsTargetInsideRange = false;
     public float Range = 10.0f;
     public Vector3 DisappearPos;
 
@@ -24,7 +23,7 @@ public class MilitaryController : MonoBehaviour
 
         Movement = GetComponent<MovementManager>();
         followPathMesh = GetComponent<FollowPathMesh>();
-        pursue = GetComponent<Pursue>();
+        arrive = GetComponent<Arrive>();
         DnN = GetComponent<DayAndNightCycle>();
     }
 
@@ -34,13 +33,25 @@ public class MilitaryController : MonoBehaviour
         GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
         GameObject[] activists = GameObject.FindGameObjectsWithTag("Activists");
 
+
+        Movement.target = GameObject.FindGameObjectWithTag("objective");
         foreach (GameObject cit in citizens)
         {
             float distance = Vector3.Distance(transform.position, cit.transform.position);
 
-            if (distance <= Range) pursue.Steer(Movement.target.transform.position, cit.transform.position); 
-            else followPathMesh.Steer(Movement.target.transform.position);
-        }
-    }
+            if (distance <= Range)
+            {
+                followPathMesh.enabled = false;
+                arrive.Steer(Movement.target.transform.position, 3);
+            }
 
+            else
+            {
+                followPathMesh.enabled = true;
+            }
+
+
+        }
+
+    }
 }

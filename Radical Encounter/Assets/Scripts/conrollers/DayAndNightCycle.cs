@@ -6,10 +6,10 @@ public class DayAndNightCycle : MonoBehaviour
 {
     public float dayLength = 2.0f;
     public float nightLength = 2.0f;
-    float time = 2.0f;
-    float hour = 0.0f;
+    public float time = 2.0f;
+    public float hour = 0.0f;
     public Light sun;
-    bool itsNight = false;
+    public bool itsNight = false;
 
     void Start()
     {
@@ -18,6 +18,7 @@ public class DayAndNightCycle : MonoBehaviour
 
     void Update()
     {
+
         sun.transform.Rotate(Time.deltaTime / time, 0, 0);
         hour += Time.deltaTime / time;
 

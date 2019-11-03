@@ -22,6 +22,12 @@ public class Pursue : Behaviour
 
     public void Steer (Vector3 targ, Vector3 TargVel)
     {
+        if (!arrive)
+            arrive = GetComponent<Arrive>();
+
+        if (!Movement)
+            Movement = GetComponent<MovementManager>();
+
         float prediction;
 
         Vector3 Direction = targ - transform.position;

@@ -26,14 +26,27 @@ public class FollowPathMesh : Behaviour
 
     public void Steer(Vector3 targ)
     {
-        NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path);
-        Subtarget = path.corners[1];
-        float distance = Subtarget.magnitude - transform.position.magnitude;
 
-        if(distance < 0.5f && path.corners.Length > 2)
-        { NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path); }
+        if(!seek)
+            GetComponent<Seek>();
+        if(!arrive)
+            GetComponent<Arrive>();
+        if (!movement)
+            GetComponent<MovementManager>();
+        if(path == null)
+            path = new NavMeshPath();
 
-        if  (path.corners.Length > 2) { seek.Steer(Subtarget, priority); }
-        else { arrive.Steer(Subtarget, priority); }
+
+            NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path);
+            if(path.corners.Length != 0)
+                Subtarget = path.corners[1];
+
+            float distance = Subtarget.magnitude - transform.position.magnitude;
+
+            if (distance < 0.5f && path.corners.Length > 2)
+            { NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path); }
+
+            if (path.corners.Length > 2) { seek.Steer(Subtarget, priority); }
+            else { arrive.Steer(Subtarget, priority); }
     }
 }

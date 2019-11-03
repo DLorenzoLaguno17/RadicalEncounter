@@ -9,21 +9,21 @@ Dani Lorenzo & Jacobo Galofre
 # Github link
 https://github.com/DLorenzoLaguno17/RadicalEncounter
 
-#About the game
+# About the game
 
-##Characters
+## Characters
 - Activists: They are the defenders of the place.
 - Military: The wicked men attacking the village.
 - Citizens: Simple people trying to live a normal live.
 
-##Areas
+## Areas
 - Camp: The safest area of the town. In it, there are all the hospital tents and the majority of the activist forces,
 and it is the most important place if they want to survive. It must be kept safe from the enemy at all cost.
 - Urban center: The urban center is where most of the action is developed, and there is where all three different 
 types of characters interact with each other.
 - Outskirts: This is from where all the enemies will enter the city. There are two different accesses.
 
-##Mechanics
+## Mechanics
 There are no mechanics in this version of the game, only the AI implemnted, performing their routines.
 
 # License

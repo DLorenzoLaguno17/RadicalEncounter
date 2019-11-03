@@ -35,8 +35,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(SpawnEnemies());
-        //StartCoroutine(SpawnActivists());
+        StartCoroutine(SpawnEnemies());
+        StartCoroutine(SpawnActivists());
         StartCoroutine(SpawnCitizens());
     }
 
@@ -47,12 +47,10 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < militarCount; ++i) {
 
             Vector3 spawnPosition;
-            /* if (Random.Range(0, 2) < 1.0f)
-                 spawnPosition = new Vector3(Random.Range(militarSpawnValues1.x - 4, militarSpawnValues1.x + 4), militarSpawnValues1.y, militarSpawnValues1.z);
+            if (Random.Range(0, 2) < 1.0f)
+                 spawnPosition = new Vector3(Random.Range(militarSpawn1.transform.position.x - 4, militarSpawn1.transform.position.x + 4), militarSpawn1.transform.position.y, militarSpawn1.transform.position.z);
              else
-                 spawnPosition = new Vector3(Random.Range(militarSpawnValues2.x - 4, militarSpawnValues2.x + 4), militarSpawnValues2.y, militarSpawnValues2.z);*/
-
-            spawnPosition = new Vector3(militarSpawn1.transform.position.x, militarSpawn1.transform.position.y, militarSpawn1.transform.position.z);
+                 spawnPosition = new Vector3(Random.Range(militarSpawn2.transform.position.x - 4, militarSpawn2.transform.position.x + 4), militarSpawn2.transform.position.y, militarSpawn2.transform.position.z);
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(military[Random.Range(0, military.Length)], spawnPosition, spawnRotation);
 
@@ -66,8 +64,7 @@ public class GameController : MonoBehaviour
 
         for (int i = 0; i < activistCount; ++i)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(activistSpawn.transform.position.x - 5, activistSpawn.transform.position.x + 5),
-                activistSpawn.transform.position.y, Random.Range(activistSpawn.transform.position.z - 5, activistSpawn.transform.position.z + 5));
+            Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
 
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);

@@ -30,13 +30,7 @@ public class Wanderer : Behaviour
 
         Vector3 targetPosition = transform.position + (OrientationToVector(Movement.rotation) * WanderOffset);
         targetPosition = targetPosition + (OrientationToVector(targetOrientation) * WanderRadius);
-        seek.Steer(targetPosition);
-
-        Vector3 output = targetPosition - transform.position;
-
-        output.Normalize();
-        output *= Movement.MaximumAcceleration;
-        Movement.AccelerateMovement(output, priority);
+        seek.Steer(targetPosition, priority);
     }
 
     float RandomBinomial()
@@ -46,7 +40,7 @@ public class Wanderer : Behaviour
 
     public static Vector3 OrientationToVector(float orientation)
     {
-            return new Vector3(Mathf.Cos(-orientation), 0, Mathf.Sin(-orientation));
+        return new Vector3(Mathf.Cos(-orientation), 0, Mathf.Sin(-orientation));
     }
 
 }

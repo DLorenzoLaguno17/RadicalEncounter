@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FollowPathMesh : MonoBehaviour
+public class FollowPathMesh : Behaviour
 {
     MovementManager movement;
     private NavMeshPath path;
@@ -33,7 +33,7 @@ public class FollowPathMesh : MonoBehaviour
         if(distance < 0.5f && path.corners.Length > 2)
         { NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path); }
 
-        if(path.corners.Length > 2) { seek.Steer(Subtarget); }
-        else { arrive.Steer(Subtarget); }
+        if  (path.corners.Length > 2) { seek.Steer(Subtarget, priority); }
+        else { arrive.Steer(Subtarget, priority); }
     }
 }

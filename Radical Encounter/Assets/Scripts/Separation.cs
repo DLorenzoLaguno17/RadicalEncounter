@@ -28,7 +28,7 @@ public class Separation : Behaviour
             // Sum up all vectors and trim down to maximum acceleration
             Vector3 distance = col.gameObject.transform.position - transform.position;
             avoidanceVelocity -= distance;
-            Movement.AccelerateMovement(avoidanceVelocity.normalized * Movement.MaximumSpeed * strength.Evaluate(search_radius - distance.magnitude / search_radius), priority);            
+            Movement.AccelerateMovement(avoidanceVelocity.normalized * Movement.MaximumSpeed * strength.Evaluate(search_radius - distance.magnitude / search_radius), priority);
         }
     }
 

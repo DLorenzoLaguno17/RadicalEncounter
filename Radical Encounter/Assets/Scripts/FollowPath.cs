@@ -4,7 +4,7 @@ using UnityEngine;
 using BansheeGz.BGSpline.Components;
 using BansheeGz.BGSpline.Curve;
 
-public class FollowPath : MonoBehaviour
+public class FollowPath : Behaviour
 {
     public BGCcMath path;
     public BGCurve curve;
@@ -39,7 +39,7 @@ public class FollowPath : MonoBehaviour
             }
 
             if (distance.magnitude < FollowDistance && ratio >= FullRatio) { ratio = 0; }
-            else { seek.Steer(destination); }
+            else { seek.Steer(destination, priority); }
         }
     }
 }

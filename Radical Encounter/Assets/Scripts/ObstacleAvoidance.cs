@@ -36,15 +36,13 @@ public class ObstacleAvoidance : Behaviour
         for (int i = 0; i < raycasts.Length; ++i)
         {
             RaycastHit hit;
-            Vector3 origin = transform.position + q * raycasts[i].offset;
+            Vector3 center = transform.position + q * raycasts[i].offset;
+            center.y = 1.0f;
 
-            if (Physics.Raycast(origin, q * raycasts[i].direction.normalized, out hit, raycasts[i].length, mask))
+            if (Physics.Raycast(center, q * raycasts[i].direction.normalized, out hit, raycasts[i].length, mask))
             {
-                Vector3 newTarget;
-                newTarget.x = hit.point.x;
-                newTarget.z = hit.point.z;
-                newTarget.y = transform.position.y;
-                seek.Steer(newTarget + hit.normal * avoidRadius);
+                Vector3 newTarget = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+                seek.Steer(newTarget + hit.normal * avoidRadius, priority);               
             }
         }
     }
@@ -60,8 +58,8 @@ public class ObstacleAvoidance : Behaviour
             // TODO 2: Debug draw those rays (Look at Gizmos.DrawLine)
             for (int i = 0; i < raycasts.Length; i++)
             {
-                Vector3 origin = transform.position + q * raycasts[i].offset;
-                Gizmos.DrawLine(origin, origin + (q * raycasts[i].direction.normalized) * raycasts[i].length);
+                Vector3 center = transform.position + q * raycasts[i].offset;
+                Gizmos.DrawLine(center, center + (q * raycasts[i].direction.normalized) * raycasts[i].length);
             }
         }
     }

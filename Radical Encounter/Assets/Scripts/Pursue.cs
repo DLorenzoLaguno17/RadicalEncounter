@@ -41,8 +41,6 @@ public class Pursue : Behaviour
         Vector3 RealTarget = targ;
         RealTarget += TargVel * prediction;
 
-        arrive.Steer(RealTarget);
-        
+        arrive.Steer(RealTarget, priority);        
     }
-
 }

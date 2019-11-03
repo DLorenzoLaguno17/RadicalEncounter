@@ -13,10 +13,10 @@ public class Seek : Behaviour
 
     void Update()
     {
-        Steer(Movement.target.transform.position);
+        Steer(Movement.target.transform.position, priority);
     }
 
-    public void Steer(Vector3 targ)
+    public void Steer(Vector3 targ, int priority)
     {
         if (!Movement)
             Movement = GetComponent<MovementManager>();
@@ -33,6 +33,5 @@ public class Seek : Behaviour
         vec *= Movement.MaximumAcceleration;
 
         return vec;
-    }
-   
+    }   
 }

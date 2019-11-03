@@ -1803,6 +1803,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 76265d3ea2773344dbff70cf016a5cc1, type: 3}
+      propertyPath: m_TagString
+      value: Citizens
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76265d3ea2773344dbff70cf016a5cc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.334234
@@ -4455,6 +4459,10 @@ PrefabInstance:
     - target: {fileID: 100058, guid: 14c9d8e4fc69472408c882bd7abd1bec, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: 14c9d8e4fc69472408c882bd7abd1bec, type: 3}
+      propertyPath: m_TagString
+      value: Activists
       objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: 14c9d8e4fc69472408c882bd7abd1bec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21898,6 +21906,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: f4e535defbffdb748a6d9d29bc4d6bda, type: 3}
+      propertyPath: m_TagString
+      value: Military
+      objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: f4e535defbffdb748a6d9d29bc4d6bda, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.09
@@ -22158,6 +22170,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 987353303335923163, guid: f4e535defbffdb748a6d9d29bc4d6bda,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e535defbffdb748a6d9d29bc4d6bda, type: 3}
 --- !u!4 &757366068 stripped
@@ -22373,6 +22390,10 @@ PrefabInstance:
     - target: {fileID: 100058, guid: f6b50d478ce7ba146b906cf629738744, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: f6b50d478ce7ba146b906cf629738744, type: 3}
+      propertyPath: m_TagString
+      value: Activists
       objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: f6b50d478ce7ba146b906cf629738744, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26424,6 +26445,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b5eb1f01cbdd3c46b67e398d2d9f8fd, type: 3}
+      propertyPath: m_TagString
+      value: Citizens
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b5eb1f01cbdd3c46b67e398d2d9f8fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.304235
@@ -27298,6 +27323,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: b4256e89b7b1cab4e95aaed3d5d66b6d, type: 3}
+      propertyPath: m_TagString
+      value: Military
+      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: b4256e89b7b1cab4e95aaed3d5d66b6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.244236
@@ -27557,6 +27586,11 @@ PrefabInstance:
     - target: {fileID: 100034, guid: b4256e89b7b1cab4e95aaed3d5d66b6d, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953440851762237653, guid: b4256e89b7b1cab4e95aaed3d5d66b6d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4256e89b7b1cab4e95aaed3d5d66b6d, type: 3}
@@ -28532,7 +28566,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960823494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0a4ae340601274c9e9d14d5f5b5171, type: 3}
   m_Name: 
@@ -28541,7 +28575,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Range: 10
-  BasePosition: {x: 0, y: 0, z: 0}
   DisappearPos: {x: 0, y: 0, z: 0}
 --- !u!114 &960823506
 MonoBehaviour:
@@ -40082,7 +40115,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343160800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0a4ae340601274c9e9d14d5f5b5171, type: 3}
   m_Name: 
@@ -40091,7 +40124,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Range: 10
-  BasePosition: {x: 0, y: 0, z: 0}
   DisappearPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1343160812
 MonoBehaviour:
@@ -46002,6 +46034,10 @@ PrefabInstance:
     - target: {fileID: 100066, guid: bb0bbb3bd42912a4cb4ce1c044ba210d, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: bb0bbb3bd42912a4cb4ce1c044ba210d, type: 3}
+      propertyPath: m_TagString
+      value: Citizens
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: bb0bbb3bd42912a4cb4ce1c044ba210d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56149,6 +56185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jeffrey Brick
       objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: 46bba2343189f674ba4e3fd336711da4, type: 3}
+      propertyPath: m_TagString
+      value: Activists
+      objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: 46bba2343189f674ba4e3fd336711da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.994235
@@ -57198,7 +57238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927984093}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0a4ae340601274c9e9d14d5f5b5171, type: 3}
   m_Name: 
@@ -57207,7 +57247,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Range: 10
-  BasePosition: {x: 0, y: 0, z: 0}
   DisappearPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1927984105
 MonoBehaviour:
@@ -57344,6 +57383,10 @@ PrefabInstance:
     - target: {fileID: 100050, guid: f435020792916dc4fbafa459d432411e, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: f435020792916dc4fbafa459d432411e, type: 3}
+      propertyPath: m_TagString
+      value: Military
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: f435020792916dc4fbafa459d432411e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57604,6 +57647,11 @@ PrefabInstance:
     - target: {fileID: 100034, guid: f435020792916dc4fbafa459d432411e, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884048111419825231, guid: f435020792916dc4fbafa459d432411e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f435020792916dc4fbafa459d432411e, type: 3}

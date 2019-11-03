@@ -12,17 +12,12 @@ public class MilitaryController : MonoBehaviour
 
     bool IsTargetInsideRange = false;
     public float Range = 10.0f;
-    public Vector3 BasePosition;
     public Vector3 DisappearPos;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        BasePosition.x = 257.93f;
-        BasePosition.y = 119.63f;
-        BasePosition.z = -40.27f;
-
         DisappearPos.x = 266.16f;
         DisappearPos.y = 119.63f;
         DisappearPos.z = -111.5f;
@@ -36,41 +31,15 @@ public class MilitaryController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SearchTarget();
+        GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
+        GameObject[] activists = GameObject.FindGameObjectsWithTag("Activists");
 
-        //if(DnN.hour < 180)
-        //{
-        if (IsTargetInsideRange == false)
+        foreach (GameObject cit in citizens)
         {
-            followPathMesh.Steer(BasePosition);
-        }
-        else if (IsTargetInsideRange == true)
-        {
-            pursue.Steer(Movement.target.transform.position, Movement.target.GetComponent<MovementManager>().movement);
-        }
-        //}
-        //else
-        //{
-        //    if(1 < DisappearPos.magnitude - transform.position.magnitude)
-        //        followPathMesh.Steer(DisappearPos);
-        //    else
-        //        Destroy(gameObject);
-        //}
+            float distance = Vector3.Distance(transform.position, cit.transform.position);
 
-    }
-
-    public void SearchTarget()
-    {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, Range, mask);
-        foreach (Collider col in colliders)
-        {
-            if (col.gameObject.name == "Jojo Puentes" || col.gameObject.name == "Usollip" || col.gameObject.name == "Cram")
-            {
-                Movement.target = col.gameObject;
-                IsTargetInsideRange = true;
-            }
-            else
-                IsTargetInsideRange = false;
+            if (distance <= Range) pursue.Steer(Movement.target.transform.position, cit.transform.position); 
+            else followPathMesh.Steer(Movement.target.transform.position);
         }
     }
 

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClampName : MonoBehaviour
+public class ClampImage : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Text nameLabel;
+    public Image icon;
 
     // Update is called once per frame
     void Update()
     {
         Vector3 namePos = Camera.main.WorldToScreenPoint(this.transform.position);
-        nameLabel.transform.position = namePos;
+        icon.transform.position = namePos;
     }
 }

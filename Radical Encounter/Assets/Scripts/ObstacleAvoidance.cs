@@ -54,7 +54,7 @@ public class ObstacleAvoidance : Behaviour
             float angle = Mathf.Atan2(Movement.movement.x, Movement.movement.z);
             Quaternion q = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
 
-            // TODO 2: Debug draw those rays (Look at Gizmos.DrawLine)
+            // Debug draw of the rays
             for (int i = 0; i < raycasts.Length; i++)
             {
                 Vector3 center = transform.position + q * raycasts[i].offset;

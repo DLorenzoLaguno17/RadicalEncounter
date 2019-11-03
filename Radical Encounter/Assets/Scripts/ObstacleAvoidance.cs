@@ -28,11 +28,10 @@ public class ObstacleAvoidance : Behaviour
     // Update is called once per frame
     void Update()
     {
-        // Calculate a quaternion with rotation based on movement vector
         float alpha = Mathf.Atan2(Movement.movement.x, Movement.movement.z);
         Quaternion q = Quaternion.AngleAxis(Mathf.Rad2Deg * alpha, Vector3.up);
 
-        // 3- Cast all rays. If one hit, get away from that surface using the hitpoint and normal info
+        // Cast all rays. If one hits, the entity gets away from that surface
         for (int i = 0; i < raycasts.Length; ++i)
         {
             RaycastHit hit;

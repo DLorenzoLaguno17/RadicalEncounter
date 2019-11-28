@@ -8,6 +8,7 @@ TagManager:
   - Citizens
   - Activists
   - objective
+  - Destroyable
   layers:
   - Default
   - TransparentFX

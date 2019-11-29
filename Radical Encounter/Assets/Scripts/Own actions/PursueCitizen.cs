@@ -5,8 +5,8 @@ public class PursueCitizen : ActionTask
 {
     Pursue pursue;
     MilitaryBehaviour militar;
-    GameObject citizen;
-
+    public int minDistance;
+    public int maxDistance;
     protected override string OnInit()
     {
         militar = agent.gameObject.GetComponent<MilitaryBehaviour>();
@@ -16,7 +16,13 @@ public class PursueCitizen : ActionTask
 
     protected override void OnUpdate()
     {
-        pursue.Steer(citizen.transform.position, citizen.GetComponent<MovementManager>().movement);
-        EndAction(true);
+        pursue.Steer(militar.closestCitizen.transform.position, militar.closestCitizen.GetComponent<MovementManager>().movement);
+
+        // Check the distance between the militar and its objective 
+        Vector3 distance = militar.closestCitizen.transform.position - agent.gameObject.transform.position;
+        if (distance.magnitude < minDistance)
+            EndAction(true);
+        else if (distance.magnitude > maxDistance)
+            EndAction(false);
     }
 }

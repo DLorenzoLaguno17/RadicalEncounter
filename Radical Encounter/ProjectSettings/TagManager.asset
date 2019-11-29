@@ -9,6 +9,7 @@ TagManager:
   - Activists
   - objective
   - Destroyable
+  - Camp
   layers:
   - Default
   - TransparentFX

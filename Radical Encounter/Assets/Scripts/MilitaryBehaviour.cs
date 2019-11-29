@@ -11,10 +11,11 @@ public class MilitaryBehaviour : MonoBehaviour
     public bool citizenSeen = false;
     public bool citizenNear = false;
     public bool citizenFar = false;
+    public bool hasArrived = false;
 
     // Update is called once per frame
     void Update()
     {
-        citizenSeen = true;
+       // citizenSeen = true;
     }
 }

@@ -36,7 +36,7 @@ public class ObstacleAvoidance : Behaviour
         {
             RaycastHit hit;
             Vector3 center = transform.position + q * raycasts[i].offset;
-            center.y = 1.0f;
+            center.y = 500.0f;
 
             if (Physics.Raycast(center, q * raycasts[i].direction.normalized, out hit, raycasts[i].length, mask))
             {

@@ -22,6 +22,12 @@ public class Evade : Behaviour
 
     public void Steer(Vector3 targ, Vector3 TargVel)
     {
+        if (!Movement)
+            Movement = GetComponent<MovementManager>();
+
+        if (!flee)
+            flee = GetComponent<Flee>();
+
         float prediction;
 
         Vector3 Direction = targ - transform.position;

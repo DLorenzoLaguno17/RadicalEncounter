@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemies());
-        StartCoroutine(SpawnActivists());
+        //StartCoroutine(SpawnActivists());
         StartCoroutine(SpawnCitizens());
     }
 

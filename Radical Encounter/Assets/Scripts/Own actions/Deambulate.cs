@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using NodeCanvas.Framework;
 
-public class TakeAWalk : ActionTask
+public class Deambulate : ActionTask
 {
     Wanderer wander;
     CitizenBehaviour citizen;
@@ -17,6 +17,5 @@ public class TakeAWalk : ActionTask
     protected override void OnUpdate()
     {
         wander.Steer();
-        EndAction(true);
     }
 }

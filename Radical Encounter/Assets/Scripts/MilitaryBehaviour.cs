@@ -8,10 +8,9 @@ public class MilitaryBehaviour : MonoBehaviour
     public int damage;
 
     public GameObject closestCitizen = null;
-    public int searchingRadius;
+    public int searchingRadius = 10;
     public bool citizenSeen = false;
     public bool citizenNear = false;
-    public bool citizenFar = false;
     public bool hasArrived = false;
 
     // Update is called once per frame
@@ -23,7 +22,7 @@ public class MilitaryBehaviour : MonoBehaviour
 
         foreach (GameObject currentCitizen in citizens)
         {
-            float newDistance = (currentCitizen.transform.position - transform.position).sqrMagnitude;
+            float newDistance = (currentCitizen.transform.position - transform.position).magnitude;
             if (newDistance < distance)
             {
                 distance = newDistance;
@@ -33,6 +32,10 @@ public class MilitaryBehaviour : MonoBehaviour
 
         if (distance <= searchingRadius)
             citizenSeen = true;
-        else citizenSeen = false;
+        else
+        {
+            citizenSeen = false;
+            citizenNear = false;
+        }
     }
 }

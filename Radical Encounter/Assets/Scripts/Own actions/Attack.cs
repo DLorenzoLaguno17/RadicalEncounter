@@ -18,7 +18,6 @@ public class Attack : ActionTask
 
     protected override void OnUpdate()
     {
-        
         EndAction(true);
     }
 }

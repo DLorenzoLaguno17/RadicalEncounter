@@ -7,7 +7,8 @@ public class MilitaryBehaviour : MonoBehaviour
     public int life;
     public int damage;
 
-    public GameObject closestCitizen;
+    public GameObject closestCitizen = null;
+    public int searchingRadius;
     public bool citizenSeen = false;
     public bool citizenNear = false;
     public bool citizenFar = false;
@@ -16,6 +17,22 @@ public class MilitaryBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // citizenSeen = true;
+        // Distance to the closest enemy
+        float distance = Mathf.Infinity;
+        GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
+
+        foreach (GameObject currentCitizen in citizens)
+        {
+            float newDistance = (currentCitizen.transform.position - transform.position).sqrMagnitude;
+            if (newDistance < distance)
+            {
+                distance = newDistance;
+                closestCitizen = currentCitizen;
+            }
+        }
+
+        if (distance <= searchingRadius)
+            citizenSeen = true;
+        else citizenSeen = false;
     }
 }

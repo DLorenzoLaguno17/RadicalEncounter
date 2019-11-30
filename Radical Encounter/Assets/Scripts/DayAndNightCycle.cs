@@ -9,12 +9,7 @@ public class DayAndNightCycle : MonoBehaviour
     public float time = 2.0f;
     public float hour = 0.0f;
     public Light sun;
-    public bool itsNight = false;
-
-    void Start()
-    {
-        
-    }
+    public bool isNight = false;
 
     void Update()
     {
@@ -29,7 +24,7 @@ public class DayAndNightCycle : MonoBehaviour
         {
             time = nightLength;
             sun.intensity -= Time.deltaTime;
-            itsNight = true;
+            isNight = true;
         }
 
         // Day time
@@ -37,7 +32,7 @@ public class DayAndNightCycle : MonoBehaviour
         {
             time = dayLength;
             sun.intensity += Time.deltaTime;
-            itsNight = false;
+            isNight = false;
         }
 
         // Light intensity

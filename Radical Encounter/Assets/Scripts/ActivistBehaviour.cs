@@ -19,16 +19,6 @@ public class ActivistBehaviour : MonoBehaviour
         if (life < minLife)
             isGoingToDie = true;
 
-        // Seek for militars near it
-       /* GameObject[] agents = Physics.OverlapSphere(transform.position, search_radius, mask);
-
-        if (agents.Length > 0) militarSeen = true;
-        foreach (GameObject agent in agents)
-        {
-            Vector3 distance = agent.gameObject.transform.position - transform.position;
-
-            if (newDistance.magnitude < distance.magnitude || firstTime)
-                closestMilitar = agent;
-        }*/
+       
     }
 }

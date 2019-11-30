@@ -28,14 +28,13 @@ public class FollowPathMesh : Behaviour
     {
 
         if(!seek)
-            GetComponent<Seek>();
+           seek = GetComponent<Seek>();
         if(!arrive)
-            GetComponent<Arrive>();
+           arrive = GetComponent<Arrive>();
         if (!movement)
             GetComponent<MovementManager>();
         if(path == null)
             path = new NavMeshPath();
-
 
             NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path);
             if(path.corners.Length != 0)

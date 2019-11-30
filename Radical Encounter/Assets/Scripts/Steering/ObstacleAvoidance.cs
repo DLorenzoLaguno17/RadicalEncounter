@@ -31,18 +31,26 @@ public class ObstacleAvoidance : Behaviour
         float alpha = Mathf.Atan2(Movement.movement.x, Movement.movement.z);
         Quaternion q = Quaternion.AngleAxis(Mathf.Rad2Deg * alpha, Vector3.up);
 
-        // Cast all rays. If one hits, the entity gets away from that surface
-        for (int i = 0; i < raycasts.Length; ++i)
+        //Cast all rays.If one hits, the entity gets away from that surface
+        //for (int i = 0; i < raycasts.Length; ++i)
+        //{
+        //    RaycastHit hit;
+        //    Vector3 center = transform.position + q * raycasts[i].offset;
+        //    center.y = 500.0f;
+
+        //    if (Physics.Raycast(center, q * raycasts[i].direction.normalized, out hit, raycasts[i].length, mask))
+        //    {
+        //        Vector3 newTarget = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+        //        seek.Steer(newTarget + hit.normal * avoidRadius, priority);
+        //    }
+        //}
+
+        foreach (RayCast ray in raycasts)
         {
             RaycastHit hit;
-            Vector3 center = transform.position + q * raycasts[i].offset;
-            center.y = 500.0f;
 
-            if (Physics.Raycast(center, q * raycasts[i].direction.normalized, out hit, raycasts[i].length, mask))
-            {
-                Vector3 newTarget = new Vector3(hit.point.x, transform.position.y, hit.point.z);
-                seek.Steer(newTarget + hit.normal * avoidRadius, priority);               
-            }
+            if (Physics.Raycast(new Vector3(transform.position.x, 1.0f, transform.position.z), q * ray.direction.normalized, out hit, ray.length, mask) == true)
+                seek.Steer(new Vector3(hit.point.x, transform.position.y, hit.point.z) + hit.normal * avoidRadius, priority);
         }
     }
 

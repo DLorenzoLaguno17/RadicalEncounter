@@ -13,7 +13,6 @@ public class GetAssistance : ActionTask
 
     protected override void OnUpdate()
     {
-
         EndAction(true);
     }
 }

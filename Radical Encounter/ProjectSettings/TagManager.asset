@@ -10,6 +10,8 @@ TagManager:
   - objective
   - Destroyable
   - Camp
+  - Boundary
+  - SoldierBullet
   layers:
   - Default
   - TransparentFX

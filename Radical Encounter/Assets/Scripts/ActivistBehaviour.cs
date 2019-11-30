@@ -17,8 +17,6 @@ public class ActivistBehaviour : MonoBehaviour
     void Update()
     {
         if (life < minLife)
-            isGoingToDie = true;
-
-       
+            isGoingToDie = true;       
     }
 }

@@ -8,6 +8,7 @@ public class MilitaryBehaviour : MonoBehaviour
     public int damage;
 
     public GameObject closestCitizen = null;
+    public Transform shotSpawn = null;
     public int searchingRadius = 10;
     public bool citizenSeen = false;
     public bool citizenNear = false;
@@ -36,6 +37,25 @@ public class MilitaryBehaviour : MonoBehaviour
         {
             citizenSeen = false;
             citizenNear = false;
+        }
+    }
+
+    public void ShootBullets(GameObject shot, Vector3 position, Quaternion rotation)
+    {
+        Instantiate(shot, position, rotation);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "ActivistBullet")
+        {
+            Destroy(other.gameObject);
+            life -= 15;
+
+            if (life <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

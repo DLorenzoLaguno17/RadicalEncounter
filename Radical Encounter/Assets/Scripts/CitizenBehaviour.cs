@@ -35,4 +35,18 @@ public class CitizenBehaviour : MonoBehaviour
             militarSeen = true;
         else militarSeen = false;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "SoldierBullet")
+        {
+            Destroy(other.gameObject);
+            life -= 15;
+
+            if (life <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

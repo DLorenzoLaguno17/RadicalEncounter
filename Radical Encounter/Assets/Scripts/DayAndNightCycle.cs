@@ -13,7 +13,6 @@ public class DayAndNightCycle : MonoBehaviour
 
     void Update()
     {
-
         sun.transform.Rotate(Time.deltaTime / time, 0, 0);
         hour += Time.deltaTime / time;
 

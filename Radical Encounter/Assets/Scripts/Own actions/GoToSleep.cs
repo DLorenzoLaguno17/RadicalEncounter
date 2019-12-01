@@ -3,20 +3,19 @@ using NodeCanvas.Framework;
 
 public class GoToSleep : ActionTask
 {
-    Flee flee;
+    FollowPathMesh f_path;
     CitizenBehaviour citizen;
-    GameObject militar;
 
     protected override string OnInit()
     {
         citizen = agent.gameObject.GetComponent<CitizenBehaviour>();
-        flee = agent.gameObject.GetComponent<Flee>();
+        f_path = agent.gameObject.GetComponent<FollowPathMesh>();
         return null;
     }
 
     protected override void OnUpdate()
     {
-        flee.Steer(militar.transform.position);
+        //f_path.Steer(militar.transform.position);
         EndAction(true);
     }
 }

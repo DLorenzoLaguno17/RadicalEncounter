@@ -17,6 +17,7 @@ public class CitizenBehaviour : MonoBehaviour
     {
         if (GameObject.Find("Game Controller").GetComponent<DayAndNightCycle>().isNight)
             goToSleep = true;
+        else goToSleep = false;
 
         float distance = Mathf.Infinity;
         GameObject[] military = GameObject.FindGameObjectsWithTag("Military");

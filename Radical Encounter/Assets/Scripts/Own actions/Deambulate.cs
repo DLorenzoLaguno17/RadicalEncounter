@@ -17,5 +17,6 @@ public class Deambulate : ActionTask
     protected override void OnUpdate()
     {
         wander.Steer();
+        EndAction(false);
     }
 }

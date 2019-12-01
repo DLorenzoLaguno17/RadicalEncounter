@@ -23,7 +23,9 @@ public class RunAway : ActionTask
         if (distance.magnitude > citizen.searchingRadius)
         {
             citizen.militarSeen = false;
-            EndAction(false);
+            EndAction(true);
         }
+
+        EndAction(false);
     }
 }

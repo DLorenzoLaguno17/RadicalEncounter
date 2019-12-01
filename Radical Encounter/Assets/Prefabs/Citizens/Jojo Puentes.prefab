@@ -785,6 +785,7 @@ GameObject:
   - component: {fileID: 1314238502169694344}
   - component: {fileID: 1314238502169694342}
   - component: {fileID: 1314238502169694343}
+  - component: {fileID: -2971559763458250559}
   m_Layer: 8
   m_Name: Jojo Puentes
   m_TagString: Citizens
@@ -1062,6 +1063,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 3
+--- !u!114 &-2971559763458250559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314238502169662996}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b80274b627a9944696de35f53f2465a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
 --- !u!1 &1314238502169662998
 GameObject:
   m_ObjectHideFlags: 0

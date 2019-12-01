@@ -16,10 +16,10 @@ public class LookWhereGoing : Behaviour
     // Update is called once per frame
     void Update()
     {
-        steer();
+        Steer();
     }
 
-    public void steer()
+    public void Steer()
     {
         Vector3 direction = Movement.movement;
         float step = RotSpeed * Time.deltaTime;

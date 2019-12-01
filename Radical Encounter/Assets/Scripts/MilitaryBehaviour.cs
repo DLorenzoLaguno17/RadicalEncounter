@@ -6,6 +6,8 @@ public class MilitaryBehaviour : MonoBehaviour
 {
     public int life;
     public int damage;
+    float checkDelay = 1.0f;
+    float nextCheckTime;
 
     LookWhereGoing look;
     public GameObject closestTarget = null;
@@ -39,6 +41,12 @@ public class MilitaryBehaviour : MonoBehaviour
                 closestTarget = currentCitizen;
             }
         }
+
+        /*if (Time.time >= nextCheckTime)
+        {
+            nextCheckTime = Time.time + checkDelay;
+            isHurt = false;
+        }*/
 
         if (distance <= minDistance)
             citizenNear = true;

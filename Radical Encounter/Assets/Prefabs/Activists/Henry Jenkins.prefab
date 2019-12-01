@@ -3567,7 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
-  minLife: 20
+  minLife: 30
   isGoingToDie: 0
   closestMilitar: {fileID: 0}
   shotSpawn: {fileID: 3319274143512190297}

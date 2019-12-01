@@ -7,7 +7,7 @@ public class GetAssistance : ActionTask
     FollowPathMesh f_path;
 
     public GameObject CampPosition;
-    public float healingDelay = 0.5f;
+    public float healingDelay = 1.0f;
     float nextHealTime;
 
     protected override string OnInit()

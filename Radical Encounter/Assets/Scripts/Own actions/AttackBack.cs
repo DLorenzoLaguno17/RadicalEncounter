@@ -5,6 +5,8 @@ public class AttackBack : ActionTask
 {
     public float shotDelay = 0.5f;
     float nextShotTime;
+    bool activistNear = false;
+
     MilitaryBehaviour military;
     MovementManager movement;
     LookWhereGoing look;
@@ -19,6 +21,11 @@ public class AttackBack : ActionTask
 
     protected override void OnExecute()
     {
+        
+    }
+
+    protected override void OnUpdate()
+    {
         float distance = Mathf.Infinity;
         GameObject[] activists = GameObject.FindGameObjectsWithTag("Activists");
 
@@ -31,10 +38,11 @@ public class AttackBack : ActionTask
                 military.closestTarget = currentActivist;
             }
         }
-    }
 
-    protected override void OnUpdate()
-    {
+        if (distance <= military.searchingRadius)
+            activistNear = true;
+        else activistNear = false;
+
         agent.gameObject.transform.LookAt(military.closestTarget.transform.position);
         look.enabled = false;
         movement.SetMovementVelocity(Vector3.zero);
@@ -45,8 +53,11 @@ public class AttackBack : ActionTask
             military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
         }
 
-        if (military.citizenNear == false)
-            EndAction(true);
-        else EndAction(false);
+        if (activistNear == false)
+        {
+            military.isHurt = false;
+            EndAction(false);
+        }
+        else EndAction(true);
     }
 }

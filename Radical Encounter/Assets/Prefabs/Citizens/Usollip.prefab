@@ -1812,7 +1812,7 @@ MonoBehaviour:
   mustRepair: 0
   goToSleep: 0
   closestMilitar: {fileID: 0}
-  searchingRadius: 30
+  searchingRadius: 35
   militarSeen: 0
 --- !u!114 &3614735610674969558
 MonoBehaviour:

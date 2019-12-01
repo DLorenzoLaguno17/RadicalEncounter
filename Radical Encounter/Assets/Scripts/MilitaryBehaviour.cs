@@ -9,6 +9,7 @@ public class MilitaryBehaviour : MonoBehaviour
     float checkDelay = 1.0f;
     float nextCheckTime;
 
+    public GameObject closestBuilding;
     LookWhereGoing look;
     public GameObject closestTarget = null;
     public Transform shotSpawn = null;
@@ -18,7 +19,9 @@ public class MilitaryBehaviour : MonoBehaviour
     public bool citizenSeen = false;
     public bool citizenNear = false;
     public bool hasArrived = false;
+    public bool attackBuilding = false;
     public bool isHurt = false;
+    float b_distance = Mathf.Infinity;
 
     private void Start()
     {
@@ -28,6 +31,23 @@ public class MilitaryBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Distance to the closest destroyable building
+        GameObject[] buildings = GameObject.FindGameObjectsWithTag("Destroyable");
+
+        foreach (GameObject currentBuilding in buildings)
+        {
+            float newDistance = (currentBuilding.transform.position - transform.position).magnitude;
+            if (newDistance < b_distance)
+            {
+                b_distance = newDistance;
+                closestBuilding = currentBuilding;
+            }
+
+            if (b_distance <= 15)
+                attackBuilding = true;
+            else attackBuilding = false;
+        }        
+
         // Distance to the closest citizen
         float distance = Mathf.Infinity;
         GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
@@ -42,11 +62,11 @@ public class MilitaryBehaviour : MonoBehaviour
             }
         }
 
-        /*if (Time.time >= nextCheckTime)
+        if (Time.time >= nextCheckTime)
         {
             nextCheckTime = Time.time + checkDelay;
             isHurt = false;
-        }*/
+        }
 
         if (distance <= minDistance)
             citizenNear = true;

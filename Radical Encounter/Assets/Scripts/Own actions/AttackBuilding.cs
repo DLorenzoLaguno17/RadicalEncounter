@@ -29,7 +29,7 @@ public class AttackBuilding : ActionTask
         foreach (DestroyableBuildingsBehaviour currentBuilding in buildings)
         {
             float newDistance = (currentBuilding.transform.position - agent.gameObject.transform.position).magnitude;
-            if (newDistance < distance && currentBuilding.HP < 0)
+            if (newDistance < distance && currentBuilding.HP > 0)
             {
                 distance = newDistance;
                 closestBuilding = currentBuilding;
@@ -39,34 +39,41 @@ public class AttackBuilding : ActionTask
 
     protected override void OnUpdate()
     {
-        distance = (closestBuilding.transform.position - agent.gameObject.transform.position).magnitude;
-        if (distance < 15)
-            arrivedToBuilding = true;
-
-        // Check if has arrived to the building
-        if (arrivedToBuilding)
+        if (closestBuilding != null)
         {
-            agent.gameObject.transform.LookAt(closestBuilding.transform.position);
-            movement.SetMovementVelocity(Vector3.zero);
+            distance = (closestBuilding.transform.position - agent.gameObject.transform.position).magnitude;
+            if (distance < 15)
+                arrivedToBuilding = true;
 
-            if (Time.time >= nextShotTime)
+            // Check if has arrived to the building
+            if (arrivedToBuilding)
             {
-                nextShotTime = Time.time + shotDelay;
-                military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
+                agent.gameObject.transform.LookAt(closestBuilding.transform.position);
+                movement.SetMovementVelocity(Vector3.zero);
+
+                if (Time.time >= nextShotTime)
+                {
+                    nextShotTime = Time.time + shotDelay;
+                    military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
+                }
+
+                if (closestBuilding.HP == 0)
+                {
+                    closestBuilding = null;
+                    EndAction(false);
+                }
+
+                Debug.Log(closestBuilding.tag);
+
             }
+            else arrive.Steer(closestBuilding.transform.position, arrive.priority);
 
-            if (closestBuilding.HP == 0)
-            {
-                closestBuilding = null;
+            if (military.isHurt)
                 EndAction(false);
-            }
-
-            Debug.Log(closestBuilding.tag);
-
         }
-        else arrive.Steer(closestBuilding.transform.position, arrive.priority);        
-
-        if (military.isHurt)
+        else
+        {
             EndAction(false);
+        }
     }
 }

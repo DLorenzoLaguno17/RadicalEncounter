@@ -50,4 +50,6 @@ public class CitizenBehaviour : MonoBehaviour
             }
         }
     }
+
+    public void DestroyThis() { Destroy(gameObject); }
 }

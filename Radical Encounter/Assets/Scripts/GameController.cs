@@ -35,9 +35,9 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(SpawnEnemies());
-        //StartCoroutine(SpawnActivists());
-        //StartCoroutine(SpawnCitizens());
+        StartCoroutine(SpawnEnemies());
+        StartCoroutine(SpawnActivists());
+        StartCoroutine(SpawnCitizens());
     }
 
     IEnumerator SpawnEnemies()
@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(military[Random.Range(0, military.Length)], spawnPosition, spawnRotation);
 
-            yield return new WaitForSeconds(spawnWait);
+            yield return new WaitForSeconds(3.0f);
         }
     }
 

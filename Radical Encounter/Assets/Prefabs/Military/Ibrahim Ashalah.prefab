@@ -2390,7 +2390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f08763e540b4624fa811c75cbbc6f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 5
+  priority: 4
 --- !u!114 &922097596102480726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ed01fefe498f9449aab94a4e7f5627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 5
+  priority: 4
   SlowRadius: 5
   TimeToTarget: 0.1
 --- !u!114 &922097596102480724

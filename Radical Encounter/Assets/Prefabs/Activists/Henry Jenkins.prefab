@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de07167651981a74a87144aa52d41e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 6312511266338324997, guid: 2fd26ea5606a7c448a837cf5f2ee4284, type: 3}
   MaximumSpeed: 5
   MaximumAcceleration: 0.1
   MaximumRotationSpeed: 10
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f08763e540b4624fa811c75cbbc6f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 5
+  priority: 4
 --- !u!114 &1729146828988573164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ed01fefe498f9449aab94a4e7f5627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 5
+  priority: 4
   SlowRadius: 5
   TimeToTarget: 0.1
 --- !u!114 &1729146828988573153

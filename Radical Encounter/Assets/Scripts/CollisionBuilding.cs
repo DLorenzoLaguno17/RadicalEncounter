@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class CollisionBuilding : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public GameObject ButtonRepair;
 
     void OnTriggerEnter(Collider other)
     {
@@ -32,5 +22,10 @@ public class CollisionBuilding : MonoBehaviour
                 transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP = 0;
             }
         }
+    }
+
+    private void OnMouseDown()
+    {
+        ButtonRepair.GetComponentInParent<ButtonsBehaviour>().GoToRepair = gameObject;
     }
 }

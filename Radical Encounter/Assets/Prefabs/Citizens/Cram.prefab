@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 721112164894913965}
   - component: {fileID: 721112164894913964}
   - component: {fileID: -2519137531226582403}
+  - component: {fileID: 3876454117433480783}
   m_Layer: 8
   m_Name: Cram
   m_TagString: Citizens
@@ -806,6 +807,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 0
+--- !u!114 &3876454117433480783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721112164895011673}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ed01fefe498f9449aab94a4e7f5627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  SlowRadius: 5
+  TimeToTarget: 0.1
 --- !u!1 &721112164895011675
 GameObject:
   m_ObjectHideFlags: 0

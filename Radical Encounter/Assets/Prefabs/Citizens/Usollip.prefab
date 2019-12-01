@@ -1563,6 +1563,7 @@ GameObject:
   - component: {fileID: 3614735610674969558}
   - component: {fileID: 3614735610674969559}
   - component: {fileID: 3106117666831891300}
+  - component: {fileID: 7485609400162170994}
   m_Layer: 8
   m_Name: Usollip
   m_TagString: Citizens
@@ -1853,6 +1854,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 0
+--- !u!114 &7485609400162170994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614735610675068280}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ed01fefe498f9449aab94a4e7f5627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  SlowRadius: 5
+  TimeToTarget: 0.1
 --- !u!1 &3614735610675068282
 GameObject:
   m_ObjectHideFlags: 0

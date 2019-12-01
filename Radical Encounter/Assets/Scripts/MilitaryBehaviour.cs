@@ -7,7 +7,8 @@ public class MilitaryBehaviour : MonoBehaviour
     public int life;
     public int damage;
 
-    public GameObject closestCitizen = null;
+    LookWhereGoing look;
+    public GameObject closestTarget = null;
     public Transform shotSpawn = null;
     public GameObject shot;
     public int searchingRadius = 10;
@@ -15,11 +16,17 @@ public class MilitaryBehaviour : MonoBehaviour
     public bool citizenSeen = false;
     public bool citizenNear = false;
     public bool hasArrived = false;
+    public bool isHurt = false;
+
+    private void Start()
+    {
+        look = GetComponent<LookWhereGoing>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        // Distance to the closest enemy
+        // Distance to the closest citizen
         float distance = Mathf.Infinity;
         GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
 
@@ -29,21 +36,20 @@ public class MilitaryBehaviour : MonoBehaviour
             if (newDistance < distance)
             {
                 distance = newDistance;
-                closestCitizen = currentCitizen;
+                closestTarget = currentCitizen;
             }
         }
 
         if (distance <= minDistance)
             citizenNear = true;
-        else if (distance <= searchingRadius)
-        {
+        else {
+            look.enabled = true;
             citizenNear = false;
-            citizenSeen = true;
-        }
-        else
-        {
-            citizenNear = false;
-            citizenSeen = false;
+
+            if (distance <= searchingRadius)
+                citizenSeen = true;
+            else
+                citizenSeen = false;
         }
     }
 
@@ -57,11 +63,28 @@ public class MilitaryBehaviour : MonoBehaviour
         if (other.tag == "ActivistBullet")
         {
             Destroy(other.gameObject);
+            isHurt = true;
             life -= 15;
 
             if (life <= 0)
             {
                 Destroy(gameObject);
+            }
+            else
+            {
+                // Distance to the closest activist
+                float distance = Mathf.Infinity;
+                GameObject[] activists = GameObject.FindGameObjectsWithTag("Activists");
+
+                foreach (GameObject currentActivist in activists)
+                {
+                    float newDistance = (currentActivist.transform.position - transform.position).magnitude;
+                    if (newDistance < distance)
+                    {
+                        distance = newDistance;
+                        closestTarget = currentActivist;
+                    }
+                }
             }
         }
     }

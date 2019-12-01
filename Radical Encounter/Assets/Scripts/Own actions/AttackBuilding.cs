@@ -3,25 +3,27 @@ using NodeCanvas.Framework;
 
 public class AttackBuilding : ActionTask
 {
-    FollowPathMesh followPath;
+    Arrive arrive;
     MilitaryBehaviour military;
+    MovementManager movement;
     GameObject closestBuilding;
 
     public float shotDelay = 0.5f;
     float nextShotTime;
     bool arrivedToBuilding = false;
+    float distance = Mathf.Infinity;
 
     protected override string OnInit()
     {
         military = agent.gameObject.GetComponent<MilitaryBehaviour>();
-        followPath = agent.gameObject.GetComponent<FollowPathMesh>();
+        arrive = agent.gameObject.GetComponent<Arrive>();
+        movement = agent.gameObject.GetComponent<MovementManager>();
         return null;
     }
 
-    protected override void OnUpdate()
+    protected override void OnExecute()
     {
-        // Distance to the closest enemy
-        float distance = Mathf.Infinity;
+        // Distance to the closest destroyable building
         GameObject[] buildings = GameObject.FindGameObjectsWithTag("Destroyable");
 
         foreach (GameObject currentBuilding in buildings)
@@ -33,19 +35,37 @@ public class AttackBuilding : ActionTask
                 closestBuilding = currentBuilding;
             }
         }
+    }
 
-        /*if (!arrivedToBuilding)
-        {
-            followPath.Steer(closestBuilding.transform.position);
-            Debug.Log(closestBuilding.tag);
-        }*/
+    protected override void OnUpdate()
+    {
+        distance = (closestBuilding.transform.position - agent.gameObject.transform.position).magnitude;
+        if (distance < 15)
+            arrivedToBuilding = true;
 
-        if (Time.time >= nextShotTime)
+        // Check if has arrived to the building
+        if (arrivedToBuilding)
         {
-            nextShotTime = Time.time + shotDelay;
-            military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
+            agent.gameObject.transform.LookAt(closestBuilding.transform.position);
+            movement.SetMovementVelocity(Vector3.zero);
+
+            if (Time.time >= nextShotTime)
+            {
+                nextShotTime = Time.time + shotDelay;
+                military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
+            }
+
+            if (closestBuilding == null)
+            {
+                closestBuilding = null;
+                EndAction(false);
+            }
+
+           Debug.Log(closestBuilding.tag);
         }
+        else arrive.Steer(closestBuilding.transform.position, arrive.priority);        
 
-        //EndAction(false);
+        if (military.isHurt)
+            EndAction(false);
     }
 }

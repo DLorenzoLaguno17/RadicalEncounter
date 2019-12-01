@@ -7,7 +7,8 @@ public class CheckAttack : ConditionTask
     {
         float rand = Random.Range(0.0f, 10.0f);
 
-        if (rand < 5.0f) return true;
+        if (rand < 0.05f) return true;
         else return false;
+        //return false;
     }
 }

@@ -35,9 +35,9 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnEnemies());
+        //StartCoroutine(SpawnEnemies());
         //StartCoroutine(SpawnActivists());
-        StartCoroutine(SpawnCitizens());
+        //StartCoroutine(SpawnCitizens());
     }
 
     IEnumerator SpawnEnemies()

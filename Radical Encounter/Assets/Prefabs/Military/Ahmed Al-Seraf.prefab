@@ -118,8 +118,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6115507790156452355}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.09, y: 119.635605, z: -91.58869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6115507790156877371}
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 100
   damage: 15
-  closestCitizen: {fileID: 0}
+  closestTarget: {fileID: 0}
   shotSpawn: {fileID: 6115507790250329970}
   shot: {fileID: 1416195158288266651, guid: 2537f3e58a4e9434ba0965efcb1eeb41, type: 3}
   searchingRadius: 35
@@ -387,6 +387,7 @@ MonoBehaviour:
   citizenSeen: 0
   citizenNear: 0
   hasArrived: 0
+  isHurt: 0
 --- !u!1 &6115507790156452357
 GameObject:
   m_ObjectHideFlags: 0

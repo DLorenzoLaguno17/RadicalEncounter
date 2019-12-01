@@ -24,13 +24,7 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateHP();
         RenderChoice();
-    }
-
-    public void UpdateHP()
-    {
-
     }
 
     public void RenderChoice()
@@ -57,10 +51,16 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
             HALF.SetActive(false);
             if (mesh != null)
                 mesh.enabled = false;
+
+            if (HP == 0)
+            {
+                gameObject.tag = "Untagged";
+                FULL.tag = "Untagged";
+                HALF.tag = "Untagged";
+                NONE.tag = "Untagged";
+            }
         }
-    }
-       
-        
+    }            
 
     public GameObject FindCHILD(string str)
     {

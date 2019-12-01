@@ -20,11 +20,14 @@ public class CollisionBuilding : MonoBehaviour
     {
         if (other.tag == "SoldierBullet")
         {
-            if(transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP > 15)
+            // Destroy the bullet
+            Destroy(other.gameObject);
+
+            if (transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP > 15)
             {
                 transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP -= 15;
             }
-            else if(transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP < 15)
+            else if(transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP <= 15)
             {
                 transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP = 0;
             }

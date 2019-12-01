@@ -12,6 +12,7 @@ TagManager:
   - Camp
   - Boundary
   - SoldierBullet
+  - ActivistBullet
   layers:
   - Default
   - TransparentFX

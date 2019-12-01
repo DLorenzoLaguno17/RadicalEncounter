@@ -3,9 +3,9 @@ using NodeCanvas.Framework;
 
 public class Patrol : ActionTask
 {
-    GameObject Point1;
-    GameObject Point2;
-    GameObject Point3;
+    public GameObject Point1;
+    public GameObject Point2;
+    public GameObject Point3;
     ActivistBehaviour activist;
     FollowPathMesh f_path;
     int step = 1;
@@ -37,12 +37,13 @@ public class Patrol : ActionTask
             distance = Point3.transform.position - agent.gameObject.transform.position;
         }
 
-        /*if (distance.magnitude < minDistance)
+        if (distance.magnitude < 5)
         {
-            militar.hasArrived = true;
-            EndAction(true);
-        }*/
+            if (step == 1) step = 2;
+            else if (step == 2) step = 3;
+            else if (step == 3) step = 1;
+        }
 
-        EndAction(true);
+        EndAction(false);
     }
 }

@@ -19,10 +19,10 @@ public class PursueCitizen : ActionTask
 
     protected override void OnUpdate()
     {
-        pursue.Steer(militar.closestCitizen.transform.position, militar.closestCitizen.GetComponent<MovementManager>().movement);
+        pursue.Steer(militar.closestTarget.transform.position, militar.closestTarget.GetComponent<MovementManager>().movement);
 
         // Check the distance between the militar and its objective 
-        Vector3 distance = militar.closestCitizen.transform.position - agent.gameObject.transform.position;
+        Vector3 distance = militar.closestTarget.transform.position - agent.gameObject.transform.position;
 
         if (distance.magnitude < minDistance || distance.magnitude > maxDistance)
             EndAction(true);

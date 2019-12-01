@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using NodeCanvas.Framework;
 
-public class Attack : ActionTask
+public class AttackBack : ActionTask
 {
     public float shotDelay = 0.5f;
     float nextShotTime;
@@ -14,8 +14,23 @@ public class Attack : ActionTask
         military = agent.gameObject.GetComponent<MilitaryBehaviour>();
         movement = agent.gameObject.GetComponent<MovementManager>();
         look = agent.gameObject.GetComponent<LookWhereGoing>();
-
         return null;
+    }
+
+    protected override void OnExecute()
+    {
+        float distance = Mathf.Infinity;
+        GameObject[] activists = GameObject.FindGameObjectsWithTag("Activists");
+
+        foreach (GameObject currentActivist in activists)
+        {
+            float newDistance = (currentActivist.transform.position - agent.gameObject.transform.position).magnitude;
+            if (newDistance < distance)
+            {
+                distance = newDistance;
+                military.closestTarget = currentActivist;
+            }
+        }
     }
 
     protected override void OnUpdate()
@@ -24,7 +39,8 @@ public class Attack : ActionTask
         look.enabled = false;
         movement.SetMovementVelocity(Vector3.zero);
 
-        if (Time.time >= nextShotTime) {
+        if (Time.time >= nextShotTime)
+        {
             nextShotTime = Time.time + shotDelay;
             military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
         }

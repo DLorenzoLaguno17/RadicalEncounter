@@ -70,22 +70,6 @@ public class MilitaryBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            else
-            {
-                // Distance to the closest activist
-                float distance = Mathf.Infinity;
-                GameObject[] activists = GameObject.FindGameObjectsWithTag("Activists");
-
-                foreach (GameObject currentActivist in activists)
-                {
-                    float newDistance = (currentActivist.transform.position - transform.position).magnitude;
-                    if (newDistance < distance)
-                    {
-                        distance = newDistance;
-                        closestTarget = currentActivist;
-                    }
-                }
-            }
         }
     }
 }

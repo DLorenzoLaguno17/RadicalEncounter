@@ -8,11 +8,17 @@ public class ActivistBehaviour : MonoBehaviour
     public int minLife;
     public bool isGoingToDie = false;
 
+    LookWhereGoing look;
     public GameObject closestMilitar;
     public Transform shotSpawn = null;
     public GameObject shot;
     public bool militarSeen = false;
     public int search_radius;
+
+    private void Start()
+    {
+        look = GetComponent<LookWhereGoing>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,13 +37,21 @@ public class ActivistBehaviour : MonoBehaviour
             }
         }
 
-        if (life < minLife)
+        if (life <= minLife)
             isGoingToDie = true;
+        else
+        {
+            isGoingToDie = false;
+            look.enabled = true;
+        }
 
         if (distance <= search_radius)
             militarSeen = true;
         else
+        { 
             militarSeen = false;
+            look.enabled = true;
+        }
     }
 
     public void ShootBullets(GameObject shot, Vector3 position, Quaternion rotation)

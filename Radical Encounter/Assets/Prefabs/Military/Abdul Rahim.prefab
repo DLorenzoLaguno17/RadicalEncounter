@@ -1655,7 +1655,9 @@ MonoBehaviour:
   damage: 15
   closestCitizen: {fileID: 0}
   shotSpawn: {fileID: 7424676524268595447}
+  shot: {fileID: 1416195158288266651, guid: 2537f3e58a4e9434ba0965efcb1eeb41, type: 3}
   searchingRadius: 35
+  minDistance: 10
   citizenSeen: 0
   citizenNear: 0
   hasArrived: 0

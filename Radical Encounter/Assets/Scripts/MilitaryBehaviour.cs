@@ -9,6 +9,7 @@ public class MilitaryBehaviour : MonoBehaviour
 
     public GameObject closestCitizen = null;
     public Transform shotSpawn = null;
+    public GameObject shot;
     public int searchingRadius = 10;
     public int minDistance = 10;
     public bool citizenSeen = false;

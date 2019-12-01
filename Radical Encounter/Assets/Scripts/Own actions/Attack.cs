@@ -6,7 +6,6 @@ public class Attack : ActionTask
 {
     public float shotDelay = 0.5f;
     float nextShotTime;
-    public GameObject shot;
     MilitaryBehaviour military;
     MovementManager movement;
 
@@ -27,7 +26,7 @@ public class Attack : ActionTask
 
         if (Time.time >= nextShotTime) {
             nextShotTime = Time.time + shotDelay;
-            military.ShootBullets(shot, military.shotSpawn.position, military.shotSpawn.rotation);
+            military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
         }
 
         if (military.citizenNear == false)

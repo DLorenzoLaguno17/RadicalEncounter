@@ -4,13 +4,16 @@ using NodeCanvas.Framework;
 public class AttackBuilding : ActionTask
 {
     FollowPathMesh followPath;
-    MilitaryBehaviour militar;
+    MilitaryBehaviour military;
     GameObject closestBuilding;
+
+    public float shotDelay = 0.5f;
+    float nextShotTime;
     bool arrivedToBuilding = false;
 
     protected override string OnInit()
     {
-        militar = agent.gameObject.GetComponent<MilitaryBehaviour>();
+        military = agent.gameObject.GetComponent<MilitaryBehaviour>();
         followPath = agent.gameObject.GetComponent<FollowPathMesh>();
         return null;
     }
@@ -31,9 +34,18 @@ public class AttackBuilding : ActionTask
             }
         }
 
-        if (!arrivedToBuilding)
+        /*if (!arrivedToBuilding)
+        {
             followPath.Steer(closestBuilding.transform.position);
+            Debug.Log(closestBuilding.tag);
+        }*/
 
-        EndAction(true);
+        if (Time.time >= nextShotTime)
+        {
+            nextShotTime = Time.time + shotDelay;
+            military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
+        }
+
+        //EndAction(false);
     }
 }

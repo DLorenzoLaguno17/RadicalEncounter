@@ -37,7 +37,9 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
     {
         if (HP > 100)
         {
-            mesh.enabled = true;
+            if(mesh != null)
+                mesh.enabled = true;
+
             HALF.SetActive(false);
             NONE.SetActive(false);
 
@@ -46,13 +48,15 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
         {
             HALF.SetActive(true);
             NONE.SetActive(false);
-            mesh.enabled = false;
+            if (mesh != null)
+                mesh.enabled = false;
         }
         else if (HP < 50 && HP >= 0)
         {
             NONE.SetActive(true);
             HALF.SetActive(false);
-            mesh.enabled = false;
+            if (mesh != null)
+                mesh.enabled = false;
         }
     }
        

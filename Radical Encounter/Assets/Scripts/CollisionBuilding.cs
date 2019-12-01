@@ -16,9 +16,9 @@ public class CollisionBuilding : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.tag == "SoldierBullet")
+        if (other.tag == "SoldierBullet")
         {
             if(transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP > 15)
             {

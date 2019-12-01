@@ -6,7 +6,7 @@ public class AttackBuilding : ActionTask
     Arrive arrive;
     MilitaryBehaviour military;
     MovementManager movement;
-    GameObject closestBuilding;
+    DestroyableBuildingsBehaviour closestBuilding;
 
     public float shotDelay = 0.5f;
     float nextShotTime;
@@ -24,12 +24,12 @@ public class AttackBuilding : ActionTask
     protected override void OnExecute()
     {
         // Distance to the closest destroyable building
-        GameObject[] buildings = GameObject.FindGameObjectsWithTag("Destroyable");
+        DestroyableBuildingsBehaviour[] buildings = GameObject.FindObjectsOfType<DestroyableBuildingsBehaviour>();
 
-        foreach (GameObject currentBuilding in buildings)
+        foreach (DestroyableBuildingsBehaviour currentBuilding in buildings)
         {
             float newDistance = (currentBuilding.transform.position - agent.gameObject.transform.position).magnitude;
-            if (newDistance < distance)
+            if (newDistance < distance && currentBuilding.HP < 0)
             {
                 distance = newDistance;
                 closestBuilding = currentBuilding;
@@ -55,13 +55,14 @@ public class AttackBuilding : ActionTask
                 military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
             }
 
-            if (closestBuilding == null)
+            if (closestBuilding.HP == 0)
             {
                 closestBuilding = null;
                 EndAction(false);
             }
 
-           Debug.Log(closestBuilding.tag);
+            Debug.Log(closestBuilding.tag);
+
         }
         else arrive.Steer(closestBuilding.transform.position, arrive.priority);        
 

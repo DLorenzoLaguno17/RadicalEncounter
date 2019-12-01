@@ -51,14 +51,6 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
             HALF.SetActive(false);
             if (mesh != null)
                 mesh.enabled = false;
-
-            if (HP == 0)
-            {
-                gameObject.tag = "Untagged";
-                FULL.tag = "Untagged";
-                HALF.tag = "Untagged";
-                NONE.tag = "Untagged";
-            }
         }
     }            
 

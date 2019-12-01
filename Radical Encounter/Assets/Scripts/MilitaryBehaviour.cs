@@ -10,6 +10,7 @@ public class MilitaryBehaviour : MonoBehaviour
     public GameObject closestCitizen = null;
     public Transform shotSpawn = null;
     public int searchingRadius = 10;
+    public int minDistance = 10;
     public bool citizenSeen = false;
     public bool citizenNear = false;
     public bool hasArrived = false;
@@ -31,12 +32,17 @@ public class MilitaryBehaviour : MonoBehaviour
             }
         }
 
-        if (distance <= searchingRadius)
+        if (distance <= minDistance)
+            citizenNear = true;
+        else if (distance <= searchingRadius)
+        {
+            citizenNear = false;
             citizenSeen = true;
+        }
         else
         {
-            citizenSeen = false;
             citizenNear = false;
+            citizenSeen = false;
         }
     }
 

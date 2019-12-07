@@ -18,10 +18,8 @@ public class AttackBuilding : ActionTask
 
     protected override void OnUpdate()
     {
-        if (military.closestBuilding != null)
+        if (military.attackBuilding && military.isHurt == false)
         {
-            float distance = (military.closestBuilding.transform.position - agent.gameObject.transform.position).magnitude;
-            
             agent.gameObject.transform.LookAt(military.closestBuilding.transform.position);
             movement.SetMovementVelocity(Vector3.zero);
 
@@ -32,20 +30,8 @@ public class AttackBuilding : ActionTask
             }
 
             if (military.closestBuilding.GetComponentInParent<DestroyableBuildingsBehaviour>().HP == 0)
-            {
-                military.attackBuilding = false;
                 EndAction(true);
-            }
-
-            if (military.isHurt)
-            {
-                military.attackBuilding = false;
-                EndAction(true);
-            }
         }
-        else {
-            military.attackBuilding = false;
-            EndAction(true);
-        }
+        else EndAction(true);
     }
 }

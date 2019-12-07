@@ -10,19 +10,18 @@ public class ButtonsBehaviour : MonoBehaviour
     [Header(" -------- Activists spawn variables -------- ")]
     public GameObject[] activists;
     public GameObject activistSpawn;
-    public int activistCount;
-    
+    public int activistCount;    
 
     public void Recruit()
     {
-            for (int i = 0; i < activistCount; ++i)
-            {
-                Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
+       for (int i = 0; i < activistCount; ++i)
+       {
+           Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
 
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
+           Quaternion spawnRotation = Quaternion.identity;
+           Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
 
-            }
+       }
     }
 
     public void Repair()
@@ -32,5 +31,4 @@ public class ButtonsBehaviour : MonoBehaviour
             GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP = 150;
         }
     }
-
 }

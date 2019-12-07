@@ -21,7 +21,6 @@ public class MilitaryBehaviour : MonoBehaviour
     public bool hasArrived = false;
     public bool attackBuilding = false;
     public bool isHurt = false;
-    float b_distance = Mathf.Infinity;
 
     private void Start()
     {
@@ -32,6 +31,7 @@ public class MilitaryBehaviour : MonoBehaviour
     void Update()
     {
         // Distance to the closest destroyable building
+        float b_distance = Mathf.Infinity;
         GameObject[] buildings = GameObject.FindGameObjectsWithTag("Destroyable");
 
         foreach (GameObject currentBuilding in buildings)
@@ -40,13 +40,13 @@ public class MilitaryBehaviour : MonoBehaviour
             if (newDistance < b_distance)
             {
                 b_distance = newDistance;
-                closestBuilding = currentBuilding;
+                closestBuilding = currentBuilding;               
             }
+        }
 
-            if (b_distance <= 15)
-                attackBuilding = true;
-            else attackBuilding = false;
-        }        
+        if (b_distance <= 15) 
+            attackBuilding = true;
+        else attackBuilding = false;
 
         // Distance to the closest citizen
         float distance = Mathf.Infinity;

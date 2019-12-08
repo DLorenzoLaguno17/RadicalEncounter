@@ -35,9 +35,9 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnEnemies());
-        StartCoroutine(SpawnActivists());
-        StartCoroutine(SpawnCitizens());
+        //StartCoroutine(SpawnEnemies());
+        //StartCoroutine(SpawnActivists());
+        //StartCoroutine(SpawnCitizens());
     }
 
     IEnumerator SpawnEnemies()
@@ -48,9 +48,9 @@ public class GameController : MonoBehaviour
 
             Vector3 spawnPosition;
             if (Random.Range(0, 2) < 1.0f)
-                 spawnPosition = new Vector3(Random.Range(militarSpawn1.transform.position.x - 4, militarSpawn1.transform.position.x + 4), militarSpawn1.transform.position.y, militarSpawn1.transform.position.z);
+                 spawnPosition = new Vector3(Random.Range(militarSpawn1.transform.position.x - 5, militarSpawn1.transform.position.x + 5), militarSpawn1.transform.position.y, militarSpawn1.transform.position.z);
              else
-                 spawnPosition = new Vector3(Random.Range(militarSpawn2.transform.position.x - 4, militarSpawn2.transform.position.x + 4), militarSpawn2.transform.position.y, militarSpawn2.transform.position.z);
+                 spawnPosition = new Vector3(Random.Range(militarSpawn2.transform.position.x - 5, militarSpawn2.transform.position.x + 5), militarSpawn2.transform.position.y, militarSpawn2.transform.position.z);
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(military[Random.Range(0, military.Length)], spawnPosition, spawnRotation);
 
@@ -79,13 +79,12 @@ public class GameController : MonoBehaviour
 
         for (int i = 0; i < citizenCount; ++i)
         {
-            Vector3 spawnPosition = Vector3.zero;
-            int rand = Random.Range(1, 6);
-            if (rand > 1.0f && rand <= 2.0f) spawnPosition = new Vector3(citizenSpawn1.transform.position.x, citizenSpawn1.transform.position.y, citizenSpawn1.transform.position.z);                      
-            else if (rand > 2.0f && rand <= 3.0f) spawnPosition = new Vector3(citizenSpawn2.transform.position.x, citizenSpawn2.transform.position.y, citizenSpawn2.transform.position.z);                       
-            else if (rand > 3.0f && rand <= 4.0f) spawnPosition = new Vector3(citizenSpawn3.transform.position.x, citizenSpawn3.transform.position.y, citizenSpawn3.transform.position.z);                       
-            else if (rand > 4.0f && rand <= 5.0f) spawnPosition = new Vector3(citizenSpawn4.transform.position.x, citizenSpawn4.transform.position.y, citizenSpawn4.transform.position.z);                       
-            else if (rand > 5.0f && rand <= 6.0f) spawnPosition = new Vector3(citizenSpawn5.transform.position.x, citizenSpawn5.transform.position.y, citizenSpawn5.transform.position.z);                 
+            Vector3 spawnPosition = Vector3.zero;            
+            if (i % 5 == 0) spawnPosition = new Vector3(citizenSpawn1.transform.position.x, citizenSpawn1.transform.position.y, citizenSpawn1.transform.position.z);                      
+            else if (i % 4 == 0) spawnPosition = new Vector3(citizenSpawn2.transform.position.x, citizenSpawn2.transform.position.y, citizenSpawn2.transform.position.z);                       
+            else if (i % 3 == 0) spawnPosition = new Vector3(citizenSpawn3.transform.position.x, citizenSpawn3.transform.position.y, citizenSpawn3.transform.position.z);                       
+            else if (i % 2 == 0) spawnPosition = new Vector3(citizenSpawn4.transform.position.x, citizenSpawn4.transform.position.y, citizenSpawn4.transform.position.z);                       
+            else spawnPosition = new Vector3(citizenSpawn5.transform.position.x, citizenSpawn5.transform.position.y, citizenSpawn5.transform.position.z);                 
 
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(citizens[Random.Range(0, citizens.Length)], spawnPosition, spawnRotation);

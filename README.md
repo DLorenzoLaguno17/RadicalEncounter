@@ -14,8 +14,6 @@ infrastructure of the place, so you will have both to assist the people and repa
 - **Urban center:** The urban center is where most of the action is developed, and there is where all three different types of characters interact with each other.
 - **Outskirts:** The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
-![Map](
-
 <p align="center">
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg" alt="Map" width="650" height="450">
 </p>
@@ -26,7 +24,7 @@ infrastructure of the place, so you will have both to assist the people and repa
 There are no mechanics in this version of the game, only the AI implemnted, performing their routines.
 
 # Authors of the game
-This game has been developed by two third course students of the  [Bachelor’s Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/ing/estudis/graus-videojocs/), [Daniel Lorenzo](https://www.linkedin.com/in/daniel-lorenzo-laguno-a2ab35180/) & [Jacobo Galofre](https://www.linkedin.com/in/jgalofre/).
+This game has been developed by two third course students of the  [Bachelorâ€™s Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/ing/estudis/graus-videojocs/), [Daniel Lorenzo](https://www.linkedin.com/in/daniel-lorenzo-laguno-a2ab35180/) & [Jacobo Galofre](https://www.linkedin.com/in/jgalofre/).
 
 # Credits
 

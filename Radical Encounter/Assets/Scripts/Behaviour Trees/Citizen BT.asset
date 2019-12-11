@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a686a47eee2fa44cb0a34b5d86e4d5e, type: 3}
   m_Name: Citizen BT
   m_EditorClassIdentifier: 
-  _serializedGraph: '{"version":2.85,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-4763.0,"y":-4926.0},"nodes":[{"_condition":{"valueA":{"_name":"goToSleep","_targetVariableID":"a70df12b-dbd6-4e48-bf2c-c0130341cd50"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckVariable`1[[System.Boolean,
+  _serializedGraph: '{"version":2.85,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-3575.049,"y":-3626.049},"zoomFactor":0.7500072,"nodes":[{"_condition":{"valueA":{"_name":"goToSleep","_targetVariableID":"a70df12b-dbd6-4e48-bf2c-c0130341cd50"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckVariable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"_position":{"x":5242.0,"y":4977.0},"$type":"NodeCanvas.BehaviourTrees.BinarySelector","$id":"2"},{"childWeights":[{},{"_value":100.0}],"failChance":{},"_position":{"x":5084.0,"y":5081.0},"$type":"NodeCanvas.BehaviourTrees.ProbabilitySelector","$id":"6"},{"_position":{"x":4990.0,"y":5182.0},"_tag":"Join
     the activists","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"11"},{"_action":{"point1":1,"point2":2,"point3":3,"point4":4,"point5":5,"$type":"GoToSleep"},"_position":{"x":5183.0,"y":5181.0},"_tag":"Go
     to sleep","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"12"},{"_condition":{"valueA":{"_name":"mustRepair","_targetVariableID":"d74858d6-e595-4ef9-9dab-03b551434c7d"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckVariable`1[[System.Boolean,

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using NodeCanvas.Framework;
 
-public class AttackBuilding : ActionTask
+public class AttackCamp : ActionTask
 {
     MilitaryBehaviour military;
     MovementManager movement;
@@ -13,11 +13,27 @@ public class AttackBuilding : ActionTask
     {
         military = agent.gameObject.GetComponent<MilitaryBehaviour>();
         movement = agent.gameObject.GetComponent<MovementManager>();
+
         return null;
     }
 
     protected override void OnUpdate()
     {
+        // Find the closes building of the camp
+        float distance = Mathf.Infinity;
+        GameObject[] campBuildings = GameObject.FindGameObjectsWithTag("Camp");
+
+        foreach (GameObject building in campBuildings)
+        {
+            float newDistance = (building.transform.position - agent.transform.position).magnitude;
+            if (newDistance < distance)
+            {
+                distance = newDistance;
+                military.closestBuilding = building;
+            }
+        }
+
+        // Shoots it
         if (military.isHurt == false)
         {
             agent.gameObject.transform.LookAt(military.closestBuilding.transform.position);
@@ -29,7 +45,7 @@ public class AttackBuilding : ActionTask
                 military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
             }
 
-            if (military.closestBuilding.GetComponentInParent<DestroyableBuildingsBehaviour>().HP == 0)
+            if (military.closestBuilding.GetComponent<CampBuildingBehaviour>().HP == 0)
                 EndAction(true);
         }
         else EndAction(true);

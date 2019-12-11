@@ -37,7 +37,7 @@ public class MilitaryBehaviour : MonoBehaviour
         foreach (GameObject currentBuilding in buildings)
         {
             float newDistance = (currentBuilding.transform.position - transform.position).magnitude;
-            if (newDistance < b_distance)
+            if (newDistance < b_distance && currentBuilding.GetComponentInParent<DestroyableBuildingsBehaviour>().HP > 0)
             {
                 b_distance = newDistance;
                 closestBuilding = currentBuilding;               

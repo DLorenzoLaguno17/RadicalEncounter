@@ -29,8 +29,7 @@ This game has been developed by two third course students of the  [Bachelor’s 
 # Credits
 
 ## Music
-Game theme: https://filmmusic.io "Prelude and action" by Kevin MacLeod (https://incompetech.com)
-
+Game theme: https://filmmusic.io "Prelude and action" by [Kevin MacLeod](https://incompetech.com)
 License: CC BY (http://creativecommons.org/licenses/by/4.0/)
 
 ## Sound effects

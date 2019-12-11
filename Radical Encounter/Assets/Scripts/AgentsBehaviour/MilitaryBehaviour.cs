@@ -44,7 +44,7 @@ public class MilitaryBehaviour : MonoBehaviour
             }
         }
 
-        if (b_distance <= 15) 
+        if (b_distance <= 15 && hasArrived == false) 
             attackBuilding = true;
         else attackBuilding = false;
 

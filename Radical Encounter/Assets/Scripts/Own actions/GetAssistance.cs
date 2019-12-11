@@ -4,6 +4,7 @@ using NodeCanvas.Framework;
 public class GetAssistance : ActionTask
 {
     ActivistBehaviour activist;
+    MovementManager movement;
     FollowPathMesh f_path;
 
     public GameObject CampPosition;
@@ -14,6 +15,8 @@ public class GetAssistance : ActionTask
     {
         activist = agent.gameObject.GetComponent<ActivistBehaviour>();
         f_path = agent.gameObject.GetComponent<FollowPathMesh>();
+        movement = agent.gameObject.GetComponent<MovementManager>();
+
         return null;
     }
 
@@ -29,6 +32,7 @@ public class GetAssistance : ActionTask
             {
                 nextHealTime = Time.time + healingDelay;
                 activist.life += 10;
+                movement.SetMovementVelocity(Vector3.zero);
                 if (activist.life >= 100) activist.life = 100;
             }
 

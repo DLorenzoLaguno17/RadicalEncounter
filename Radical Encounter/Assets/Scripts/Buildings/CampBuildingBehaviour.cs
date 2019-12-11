@@ -11,7 +11,7 @@ public class CampBuildingBehaviour : MonoBehaviour
         if (other.tag == "SoldierBullet")
         {
             // Destroy the bullet
-           // gameObject.GetComponent<AudioSource>().Play();
+            gameObject.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
 
             HP -= 15;

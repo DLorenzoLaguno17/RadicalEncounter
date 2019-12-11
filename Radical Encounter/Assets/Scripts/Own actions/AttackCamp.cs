@@ -34,7 +34,7 @@ public class AttackCamp : ActionTask
         }
 
         // Shoots it
-        if (military.isHurt == false)
+        if (military.isHurt == false && distance < Mathf.Infinity)
         {
             agent.gameObject.transform.LookAt(military.closestBuilding.transform.position);
             movement.SetMovementVelocity(Vector3.zero);

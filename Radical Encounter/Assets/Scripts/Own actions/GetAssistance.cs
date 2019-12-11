@@ -23,7 +23,6 @@ public class GetAssistance : ActionTask
     protected override void OnUpdate()
     {
         Vector3 distance = Vector3.zero;
-        f_path.Steer(CampPosition.transform.position);
         distance = CampPosition.transform.position - agent.gameObject.transform.position;
 
         if (distance.magnitude < 5)
@@ -39,5 +38,6 @@ public class GetAssistance : ActionTask
             if(activist.life == 100)
                 EndAction(true);
         }
+        else f_path.Steer(CampPosition.transform.position);
     }
 }

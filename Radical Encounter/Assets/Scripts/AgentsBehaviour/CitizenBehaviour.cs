@@ -9,6 +9,7 @@ public class CitizenBehaviour : MonoBehaviour
     public bool goToSleep = false;
 
     public GameObject closestMilitar;
+    public GameObject buildingToRepair;
     public int searchingRadius = 10;
     public bool militarSeen = false;
 

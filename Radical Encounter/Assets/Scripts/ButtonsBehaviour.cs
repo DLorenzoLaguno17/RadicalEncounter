@@ -29,7 +29,27 @@ public class ButtonsBehaviour : MonoBehaviour
     {
         if(GoToRepair != null)
         {
-            GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP = 150;
+            // Find the closes building of the camp
+            float distance1 = Mathf.Infinity;
+            float distance2 = Mathf.Infinity;
+            GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
+
+            foreach (GameObject currentCitizen in citizens)
+            {
+                float newDistance = (currentCitizen.transform.position - GoToRepair.transform.position).magnitude;
+                if (newDistance < distance1)
+                {
+                    distance1 = newDistance;
+                    currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
+                    currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
+                }
+                else if (newDistance < distance2)
+                {
+                    distance2 = newDistance;
+                    currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
+                    currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
+                }
+            }
         }
     }
 

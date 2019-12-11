@@ -94,6 +94,8 @@ public class MilitaryBehaviour : MonoBehaviour
             isHurt = true;
             life -= 15;
 
+            gameObject.GetComponent<AudioSource>().Play();
+
             if (life <= 0)
             {
                 Destroy(gameObject);

@@ -29,7 +29,7 @@ public class Attack : ActionTask
             military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
         }
 
-        if (military.citizenNear == false)
+        if (military.citizenNear == false || military.citizenSeen == false)
             EndAction(true);
         else EndAction(false);
     }

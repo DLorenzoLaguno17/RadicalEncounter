@@ -6,6 +6,17 @@ public class CollisionBuilding : MonoBehaviour
 {
     public GameObject ButtonRepair;
 
+    public AudioClip clip1;
+    public AudioClip clip2;
+
+    AudioSource source;
+    uint bin = 0;
+
+    private void Start()
+    {
+        source = gameObject.GetComponentInParent<AudioSource>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "SoldierBullet")
@@ -21,6 +32,12 @@ public class CollisionBuilding : MonoBehaviour
             {
                 transform.parent.GetComponent<DestroyableBuildingsBehaviour>().HP = 0;
             }
+
+            if (bin % 2 == 0) source.clip = clip1;
+            else source.clip = clip2;
+
+            source.Play();
+            bin++;
         }
     }
 

@@ -13,6 +13,11 @@ public class CitizenBehaviour : MonoBehaviour
     public int searchingRadius = 10;
     public bool militarSeen = false;
 
+    private void Start()
+    {
+        GameObject.Find("Game Controller").GetComponent<Money>().Citizen++;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -47,6 +52,7 @@ public class CitizenBehaviour : MonoBehaviour
 
             if (life <= 0)
             {
+                GameObject.Find("Game Controller").GetComponent<Money>().Citizen--;
                 Destroy(gameObject);
             }
         }

@@ -17,6 +17,7 @@ public class ActivistBehaviour : MonoBehaviour
 
     private void Start()
     {
+        GameObject.Find("Game Controller").GetComponent<Money>().Ally++;
         look = GetComponent<LookWhereGoing>();
     }
 
@@ -68,6 +69,7 @@ public class ActivistBehaviour : MonoBehaviour
 
             if (life <= 0)
             {
+                GameObject.Find("Game Controller").GetComponent<Money>().Ally--;
                 Destroy(gameObject);
             }
         }

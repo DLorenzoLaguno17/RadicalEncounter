@@ -18,6 +18,7 @@ public class CampBuildingBehaviour : MonoBehaviour
 
             if (HP <= 0) {
                 HP = 0;
+                GameObject.Find("Game Controller").GetComponent<Money>().Camp--;
                 Destroy(gameObject);
             }
         }

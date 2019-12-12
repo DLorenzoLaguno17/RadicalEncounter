@@ -48,6 +48,10 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
         }
         else if (HP < 50 && HP >= 0)
         {
+            if(HP <= 0)
+            {
+                GameObject.Find("Game Controller").GetComponent<Money>().Building--;
+            }
             NONE.SetActive(true);
             HALF.SetActive(false);
             if (mesh != null)

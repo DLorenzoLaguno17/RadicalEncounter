@@ -13,12 +13,12 @@ public class Money : MonoBehaviour
     void Start()
     {
         Currency = 20;
-        Enemy = 5;
-        Ally = 3;
-        Citizen = 7;
-        Round = 2;
-        Camp = 3;
-        Building = 10;
+        Enemy = 0;
+        Ally = 0;
+        Citizen = 0;
+        Round = 0;
+        Camp = 6;
+        Building = 15;
     }
 
     // Update is called once per frame

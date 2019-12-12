@@ -21,16 +21,12 @@ public class MilitaryBehaviour : MonoBehaviour
     public bool hasArrived = false;
     public bool attackBuilding = false;
     public bool isHurt = false;
-    public int currency;
-    public int enemies;
+
 
     private void Start()
     {
         look = GetComponent<LookWhereGoing>();
-        currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency;
-        enemies = GameObject.Find("Game Controller").GetComponent<Money>().Enemy;
-
-        enemies++;
+        GameObject.Find("Game Controller").GetComponent<Money>().Enemy++;
     }
 
     // Update is called once per frame
@@ -104,8 +100,8 @@ public class MilitaryBehaviour : MonoBehaviour
 
             if (life <= 0)
             {
-                currency = currency + 2;
-                enemies--;
+                GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency + 2;
+                GameObject.Find("Game Controller").GetComponent<Money>().Enemy--;
                 Destroy(gameObject);
             }
         }

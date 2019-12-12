@@ -16,7 +16,12 @@ public class DayAndNightCycle : MonoBehaviour
         sun.transform.Rotate(Time.deltaTime / time, 0, 0);
         hour += Time.deltaTime / time;
 
-        if(hour >= 360) hour = 0;
+        if(hour >= 360)
+        {
+            hour = 0;
+            GameObject.Find("Game Controller").GetComponent<Money>().Round++;
+        }
+            
 
         // Night time
         if (hour > 180)

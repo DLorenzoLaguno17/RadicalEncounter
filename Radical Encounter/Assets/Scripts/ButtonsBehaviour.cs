@@ -27,7 +27,7 @@ public class ButtonsBehaviour : MonoBehaviour
 
     public void Repair()
     {
-        if(GoToRepair != null)
+        if(GoToRepair != null /*&& GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP < 150*/)
         {
             // Find the closes building of the camp
             float distance1 = Mathf.Infinity;

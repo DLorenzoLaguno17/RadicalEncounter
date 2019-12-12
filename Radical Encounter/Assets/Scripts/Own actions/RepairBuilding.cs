@@ -17,7 +17,7 @@ public class RepairBuilding : ActionTask
         citizen = agent.gameObject.GetComponent<CitizenBehaviour>();
         f_path = agent.gameObject.GetComponent<FollowPathMesh>();
         movement = agent.GetComponent<MovementManager>();
-        building = citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().repairPoint;
+        building = citizen.buildingToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().repairPoint;
 
         agent.gameObject.GetComponent<AudioSource>().clip = audio;
         agent.gameObject.GetComponent<AudioSource>().Play();
@@ -35,17 +35,18 @@ public class RepairBuilding : ActionTask
             if (Time.time >= nextRepairTime)
             {
                 nextRepairTime = Time.time + repairingDelay;
-                citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().HP += 15;
+                citizen.buildingToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP += 15;
                 movement.SetMovementVelocity(Vector3.zero);
 
-                if (citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().HP >= 150)
+                if (citizen.buildingToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP >= 150)
                 {
-                    citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().HP = 150;
+                    citizen.buildingToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP = 150;
                     citizen.mustRepair = false;
                     EndAction(true);
                 }
             }
         }
-        else f_path.Steer(building.transform.position);
+        else
+            f_path.Steer(building.transform.position);
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311554, g: 0.38073874, b: 0.3587339, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311575, g: 0.38073805, b: 0.3587338, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -355,6 +355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 4398778294764955044, guid: f20d8b5c7094b9e45a24464cba527d3a,
+    type: 3}
 --- !u!82 &13203816
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9066,6 +9068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 740896088997553908, guid: aac5cd9f339a04640bb90f5fac2de40b,
+    type: 3}
 --- !u!82 &309574380
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9547,6 +9551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 2694314730091746821, guid: 1a41b0f6b0ce8a447b4e42fc66bc9364,
+    type: 3}
 --- !u!82 &317117742
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13298,7 +13304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448561270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.433731, y: -0.761467, z: 64.7}
+  m_LocalPosition: {x: -12.5, y: -0.761467, z: 48.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 567138784}
@@ -16171,6 +16177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 1529957271655354155, guid: c158b8c679cbee54198dccb854bc3118,
+    type: 3}
 --- !u!82 &538844398
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16789,7 +16797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567138781}
   m_LocalRotation: {x: -0.0110233165, y: 0.26692075, z: 0.018602962, w: 0.9634759}
-  m_LocalPosition: {x: 34.03373, y: 5.461467, z: -85.5}
+  m_LocalPosition: {x: 24.099998, y: 5.461467, z: -69.200005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 448561272}
@@ -17562,6 +17570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 7564517203541009332, guid: ab3b35e4897be744ba5f39b8698937a6,
+    type: 3}
 --- !u!82 &587907240
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21828,7 +21838,7 @@ PrefabInstance:
     - target: {fileID: 1729146828988573078, guid: ae57121210f579e46bef0bbc3bd1c1ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -59.1
+      value: -34.4
       objectReference: {fileID: 0}
     - target: {fileID: 1729146828988573078, guid: ae57121210f579e46bef0bbc3bd1c1ba,
         type: 3}
@@ -21838,7 +21848,7 @@ PrefabInstance:
     - target: {fileID: 1729146828988573078, guid: ae57121210f579e46bef0bbc3bd1c1ba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 1729146828988573078, guid: ae57121210f579e46bef0bbc3bd1c1ba,
         type: 3}
@@ -23902,6 +23912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 1886934946179384477, guid: cb1c7bdd474277b42b34442be6a8919c,
+    type: 3}
 --- !u!82 &853851677
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37074,7 +37086,7 @@ PrefabInstance:
     - target: {fileID: 5103468046935618877, guid: df8cfe0a20680c641a6f4cdbf19da8b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.98
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5103468046935618877, guid: df8cfe0a20680c641a6f4cdbf19da8b1,
         type: 3}
@@ -39065,6 +39077,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 5468398762054498941, guid: bef2a2fa62129544da22ad722af98e43,
+    type: 3}
 --- !u!82 &1327157525
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40636,6 +40650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 1886934946179384477, guid: cb1c7bdd474277b42b34442be6a8919c,
+    type: 3}
 --- !u!82 &1384052667
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47118,7 +47134,7 @@ PrefabInstance:
     - target: {fileID: 7822620183891828199, guid: 8f7426abca0a1f4409996bd3fd7d32e1,
         type: 3}
       propertyPath: m_Name
-      value: Building_7_Tall_Build (1)
+      value: Building_15_Tall_Build
       objectReference: {fileID: 0}
     - target: {fileID: 7822620183891828199, guid: 8f7426abca0a1f4409996bd3fd7d32e1,
         type: 3}
@@ -49117,6 +49133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 2316152667690318510, guid: ea682fc023d0a7c4aae28a521c65fe75,
+    type: 3}
 --- !u!82 &1657682655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -51323,6 +51341,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 5277690487997354283, guid: 2feffa2189fe6fd4e9c18bd59f2986e1,
+    type: 3}
 --- !u!82 &1738875125
 AudioSource:
   m_ObjectHideFlags: 0
@@ -53630,7 +53650,7 @@ PrefabInstance:
     - target: {fileID: 5889654106776115125, guid: c1cab19e636fbfb499919adbf9bc81ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: 26.7
       objectReference: {fileID: 0}
     - target: {fileID: 5889654106776115125, guid: c1cab19e636fbfb499919adbf9bc81ba,
         type: 3}
@@ -53640,7 +53660,7 @@ PrefabInstance:
     - target: {fileID: 5889654106776115125, guid: c1cab19e636fbfb499919adbf9bc81ba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27
+      value: -11.8
       objectReference: {fileID: 0}
     - target: {fileID: 5889654106776115125, guid: c1cab19e636fbfb499919adbf9bc81ba,
         type: 3}
@@ -57897,6 +57917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 5287497909156834018, guid: b09bc1d6fb5d3d744b0175f2b31dc2c1,
+    type: 3}
 --- !u!82 &1956332332
 AudioSource:
   m_ObjectHideFlags: 0
@@ -60281,6 +60303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 2389598934394109852, guid: 6144ab29162023c419e2844b900d3b93,
+    type: 3}
 --- !u!82 &2042518969
 AudioSource:
   m_ObjectHideFlags: 0
@@ -61645,6 +61669,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 5685512245726244014, guid: b19a995554767d946957ef791dfed30f,
+    type: 3}
 --- !u!82 &2104840996
 AudioSource:
   m_ObjectHideFlags: 0
@@ -62596,6 +62622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  repairPoint: {fileID: 1173991772544720330, guid: 5a6348e6c4cac62488ffc53911583579,
+    type: 3}
 --- !u!82 &2134273667
 AudioSource:
   m_ObjectHideFlags: 0

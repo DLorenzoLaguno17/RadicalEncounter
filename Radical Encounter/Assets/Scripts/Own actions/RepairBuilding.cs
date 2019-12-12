@@ -8,6 +8,7 @@ public class RepairBuilding : ActionTask
     MovementManager movement;
     GameObject building;
 
+    public AudioClip audio;
     public float repairingDelay = 1.0f;
     float nextRepairTime;
 
@@ -16,7 +17,10 @@ public class RepairBuilding : ActionTask
         citizen = agent.gameObject.GetComponent<CitizenBehaviour>();
         f_path = agent.gameObject.GetComponent<FollowPathMesh>();
         movement = agent.GetComponent<MovementManager>();
-        building = citizen.buildingToRepair;
+        building = citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().repairPoint;
+
+        agent.gameObject.GetComponent<AudioSource>().clip = audio;
+        agent.gameObject.GetComponent<AudioSource>().Play();
 
         return null;
     }
@@ -31,12 +35,12 @@ public class RepairBuilding : ActionTask
             if (Time.time >= nextRepairTime)
             {
                 nextRepairTime = Time.time + repairingDelay;
-                building.GetComponent<CampBuildingBehaviour>().HP += 15;
+                citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().HP += 15;
                 movement.SetMovementVelocity(Vector3.zero);
 
-                if (building.GetComponent<CampBuildingBehaviour>().HP >= 150)
+                if (citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().HP >= 150)
                 {
-                    building.GetComponent<CampBuildingBehaviour>().HP = 150;
+                    citizen.buildingToRepair.GetComponent<DestroyableBuildingsBehaviour>().HP = 150;
                     citizen.mustRepair = false;
                     EndAction(true);
                 }

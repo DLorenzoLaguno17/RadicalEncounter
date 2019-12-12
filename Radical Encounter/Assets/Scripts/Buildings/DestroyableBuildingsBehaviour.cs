@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyableBuildingsBehaviour : MonoBehaviour
 {
     public int HP;
+    public GameObject repairPoint;
     GameObject FULL, HALF, NONE;
     Collider BBOX;
     MeshRenderer mesh;

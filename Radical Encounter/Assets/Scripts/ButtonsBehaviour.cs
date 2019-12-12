@@ -65,12 +65,14 @@ public class ButtonsBehaviour : MonoBehaviour
         GameObject Quit = FindCHILD("Quit");
         GameObject Back = FindCHILD("Back");
         GameObject CreditsText = FindCHILD("Credits Text");
+        GameObject Image = FindCHILD("Image");
 
         Play.SetActive(false);
         Credits.SetActive(false);
         Quit.SetActive(false);
         Back.SetActive(true);
         CreditsText.SetActive(true);
+        Image.SetActive(true);
     }
 
     public void Back()
@@ -80,12 +82,14 @@ public class ButtonsBehaviour : MonoBehaviour
         GameObject Quit = FindCHILD("Quit");
         GameObject Back = FindCHILD("Back");
         GameObject CreditsText = FindCHILD("Credits Text");
+        GameObject Image = FindCHILD("Image");
 
         Play.SetActive(true);
         Credits.SetActive(true);
         Quit.SetActive(true);
         Back.SetActive(false);
         CreditsText.SetActive(false);
+        Image.SetActive(false);
     }
 
     public void Quit()

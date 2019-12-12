@@ -17,7 +17,9 @@ public class ButtonsBehaviour : MonoBehaviour
     {
        for (int i = 0; i < activistCount; ++i)
        {
-           Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
+            GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 2;
+
+            Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
 
            Quaternion spawnRotation = Quaternion.identity;
            Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
@@ -29,6 +31,9 @@ public class ButtonsBehaviour : MonoBehaviour
     {
         if(GoToRepair != null /*&& GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP < 150*/)
         {
+            GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 5;
+            GameObject.Find("Game Controller").GetComponent<Money>().Building++;
+
             // Find the closes building of the camp
             float distance1 = Mathf.Infinity;
             float distance2 = Mathf.Infinity;

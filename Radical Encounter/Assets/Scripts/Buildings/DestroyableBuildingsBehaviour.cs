@@ -9,10 +9,12 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
     GameObject FULL, HALF, NONE;
     Collider BBOX;
     MeshRenderer mesh;
+    bool IsbuldingDestroyed;
 
     // Start is called before the first frame update
     void Start()
     {
+        IsbuldingDestroyed = false;
         HP = 150;
         FULL = FindCHILD("FULL");
         HALF = FindCHILD("HALF");
@@ -50,13 +52,21 @@ public class DestroyableBuildingsBehaviour : MonoBehaviour
         {
             if(HP <= 0)
             {
-                GameObject.Find("Game Controller").GetComponent<Money>().Building--;
+                if(!IsbuldingDestroyed)
+                {
+                    GameObject.Find("Game Controller").GetComponent<Money>().Building--;
+                    IsbuldingDestroyed = true;
+                }
             }
+
             NONE.SetActive(true);
             HALF.SetActive(false);
             if (mesh != null)
                 mesh.enabled = false;
         }
+
+        if (HP > 0)
+            IsbuldingDestroyed = false;
     }            
 
     public GameObject FindCHILD(string str)

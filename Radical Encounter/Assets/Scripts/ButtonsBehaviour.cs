@@ -17,42 +17,54 @@ public class ButtonsBehaviour : MonoBehaviour
     {
        for (int i = 0; i < activistCount; ++i)
        {
-            GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 2;
+            if (GameObject.Find("Game Controller").GetComponent<Money>().Currency >= 2)
+            {
 
-            Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
 
-           Quaternion spawnRotation = Quaternion.identity;
-           Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
+                GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 2;
 
-       }
+                GameObject.Find("Game Controller").GetComponent<GameController>().activistCount = 2;
+
+                StartCoroutine(GameObject.Find("Game Controller").GetComponent<GameController>().SpawnActivists());
+
+            }
+           // Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
+
+            //Quaternion spawnRotation = Quaternion.identity;
+            //Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
+
+        }
     }
 
     public void Repair()
     {
-        if(GoToRepair != null /*&& GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP < 150*/)
+        if (GameObject.Find("Game Controller").GetComponent<Money>().Currency >= 5)
         {
-            GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 5;
-            GameObject.Find("Game Controller").GetComponent<Money>().Building++;
-
-            // Find the closes building of the camp
-            float distance1 = Mathf.Infinity;
-            float distance2 = Mathf.Infinity;
-            GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
-
-            foreach (GameObject currentCitizen in citizens)
+            if (GoToRepair != null /*&& GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP < 150*/)
             {
-                float newDistance = (currentCitizen.transform.position - GoToRepair.transform.position).magnitude;
-                if (newDistance < distance1)
+                GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 5;
+                GameObject.Find("Game Controller").GetComponent<Money>().Building++;
+
+                // Find the closes building of the camp
+                float distance1 = Mathf.Infinity;
+                float distance2 = Mathf.Infinity;
+                GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
+
+                foreach (GameObject currentCitizen in citizens)
                 {
-                    distance1 = newDistance;
-                    currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
-                    currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
-                }
-                else if (newDistance < distance2)
-                {
-                    distance2 = newDistance;
-                    currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
-                    currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
+                    float newDistance = (currentCitizen.transform.position - GoToRepair.transform.position).magnitude;
+                    if (newDistance < distance1)
+                    {
+                        distance1 = newDistance;
+                        currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
+                        currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
+                    }
+                    else if (newDistance < distance2)
+                    {
+                        distance2 = newDistance;
+                        currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
+                        currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
+                    }
                 }
             }
         }
@@ -100,6 +112,11 @@ public class ButtonsBehaviour : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public GameObject FindCHILD(string str)

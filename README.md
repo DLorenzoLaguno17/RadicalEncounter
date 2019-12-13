@@ -17,7 +17,7 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 - **Outskirts:** The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg" alt="Map" width="700" height="450">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg" alt="Map" width="450" height="300">
 </p>
 
 *Radical Encounter's map*
@@ -31,7 +31,12 @@ This game has been developed by two third course students of the  [Bachelor’s 
 # Credits
 
 ## Music
-Game theme: https://filmmusic.io "Prelude and action" by [Kevin MacLeod](https://incompetech.com)
+Game theme from https://filmmusic.io 
+"Prelude and action" by [Kevin MacLeod](https://incompetech.com)
+License: CC BY (http://creativecommons.org/licenses/by/4.0/)
+
+Menu theme from https://filmmusic.io 
+"Dangerous" by [Kevin MacLeod](https://incompetech.com)
 License: CC BY (http://creativecommons.org/licenses/by/4.0/)
 
 ## Sound effects
@@ -42,11 +47,14 @@ License: CC BY (http://creativecommons.org/licenses/by/4.0/)
     MIT License
     Copyright (c) 2019 Dani Lorenzo & Jacobo Galofre
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 	(the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 		merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 		furnished to do so, subject to the following conditions:
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 	
+    (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge,
+    publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do
+    so, subject to the following conditions:
 
     The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 			WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 	HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 		FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+    FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

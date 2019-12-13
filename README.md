@@ -1,6 +1,8 @@
 Radical Encounter is a God Game in which the player is in charge of a group of activists that are defending their little village against a series of different enemy soldiers which will try to
 subdue your fellow citizens and friends. Those evil soldiers are going to attack them and also damage the buildings and the
-infrastructure of the place, so you will have both to assist the people and repair the patrimony, all with the help of the resources you will acquire by slaining and saving your comrades. Yo can go to our GitHub repository by clicking [here](https://github.com/DLorenzoLaguno17/RadicalEncounter) or download the last version of Radical Encounter [here](https://github.com/DLorenzoLaguno17/RadicalEncounter/releases)!
+infrastructure of the place, so you will have both to assist the people and repair the patrimony, all with the help of the resources you will acquire by slaining and saving your comrades. 
+
+Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEncounter) or [download](https://github.com/DLorenzoLaguno17/RadicalEncounter/releases) the last version of Radical Encounter!
 
 # About the game
 
@@ -37,15 +39,14 @@ License: CC BY (http://creativecommons.org/licenses/by/4.0/)
 
 # License
 
-        MIT License
+    MIT License
+    Copyright (c) 2019 Dani Lorenzo & Jacobo Galofre
 
-	Copyright (c) 2019 Dani Lorenzo & Jacobo Galofre
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 	(the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 		merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 		furnished to do so, subject to the following conditions:
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 	(the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 		merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 		furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 			WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 	HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 		FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 			WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 	HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 		FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 

@@ -39,16 +39,15 @@ public class GameController : MonoBehaviour
     public int roundComparer;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
         citizenCount = 5;
         militarCount = 5;
         roundComparer = 0;
-        StartCoroutine(SpawnEnemies());
+        //StartCoroutine(SpawnEnemies());
         //StartCoroutine(SpawnActivists());
-        StartCoroutine(SpawnCitizens());
+        //StartCoroutine(SpawnCitizens());
     }
 
     private void Update()

@@ -36,16 +36,16 @@ public class FollowPathMesh : Behaviour
         if(path == null)
             path = new NavMeshPath();
 
-            NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path);
-            if(path.corners.Length != 0)
-                Subtarget = path.corners[1];
+        NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path);
+        if(path.corners.Length != 0)
+            Subtarget = path.corners[1];
 
-            float distance = Subtarget.magnitude - transform.position.magnitude;
+        float distance = Subtarget.magnitude - transform.position.magnitude;
 
-            if (distance < 0.5f && path.corners.Length > 2)
-            { NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path); }
+        if (distance < 0.5f && path.corners.Length > 2)
+        { NavMesh.CalculatePath(transform.position, targ, NavMesh.AllAreas, path); }
 
-            if (path.corners.Length > 2) { seek.Steer(Subtarget, priority); }
-            else { arrive.Steer(Subtarget, priority); }
+        if (path.corners.Length > 2) { seek.Steer(Subtarget, priority); }
+        else { arrive.Steer(Subtarget, priority); }
     }
 }

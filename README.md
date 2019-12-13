@@ -31,13 +31,13 @@ This game has been developed by two third course students of the  [Bachelor’s 
 # Credits
 
 ## Music
-Game theme from https://filmmusic.io 
-"Prelude and action" by [Kevin MacLeod](https://incompetech.com)
-License: CC BY (http://creativecommons.org/licenses/by/4.0/)
+    Game theme from https://filmmusic.io 
+    "Prelude and action" by [Kevin MacLeod](https://incompetech.com)
+    License: CC BY (http://creativecommons.org/licenses/by/4.0/)
 
-Menu theme from https://filmmusic.io 
-"Dangerous" by [Kevin MacLeod](https://incompetech.com)
-License: CC BY (http://creativecommons.org/licenses/by/4.0/)
+    Menu theme from https://filmmusic.io 
+    "Dangerous" by [Kevin MacLeod](https://incompetech.com)
+    License: CC BY (http://creativecommons.org/licenses/by/4.0/)
 
 ## Sound effects
 * Death sound of the military: Minecraft.

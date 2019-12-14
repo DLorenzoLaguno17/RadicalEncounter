@@ -38,16 +38,15 @@ public class GameController : MonoBehaviour
 
     public int roundComparer;
 
-
     // Start is called before the first frame update
     void Start()
     {
         citizenCount = 5;
         militarCount = 5;
         roundComparer = 0;
-        StartCoroutine(SpawnEnemies());
-        StartCoroutine(SpawnActivists());
-        StartCoroutine(SpawnCitizens());
+        //StartCoroutine(SpawnEnemies());
+        //StartCoroutine(SpawnActivists());
+        //StartCoroutine(SpawnCitizens());
     }
 
     private void Update()
@@ -94,6 +93,18 @@ public class GameController : MonoBehaviour
 
             yield return new WaitForSeconds(spawnWait);
         }
+    }
+
+    public void Recruit()
+    {
+        Vector3 spawnPosition = Vector3.zero;
+        Quaternion spawnRotation = Quaternion.identity;
+
+        spawnPosition = new Vector3(activistSpawn1.transform.position.x, activistSpawn1.transform.position.y, activistSpawn1.transform.position.z);
+        Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
+
+        spawnPosition = new Vector3(activistSpawn5.transform.position.x, activistSpawn5.transform.position.y, activistSpawn5.transform.position.z);
+        Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
     }
 
     IEnumerator SpawnCitizens()

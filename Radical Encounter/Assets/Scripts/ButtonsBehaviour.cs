@@ -15,34 +15,21 @@ public class ButtonsBehaviour : MonoBehaviour
 
     public void Recruit()
     {
-       for (int i = 0; i < activistCount; ++i)
+       if (GameObject.Find("Game Controller").GetComponent<Money>().Currency >= 5)
        {
-            if (GameObject.Find("Game Controller").GetComponent<Money>().Currency >= 2)
-            {
+           GameObject.Find("Game Controller").GetComponent<Money>().Currency -= 5;
 
-
-                GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 2;
-
-                GameObject.Find("Game Controller").GetComponent<GameController>().activistCount = 2;
-
-                StartCoroutine(GameObject.Find("Game Controller").GetComponent<GameController>().SpawnActivists());
-
-            }
-           // Vector3 spawnPosition = new Vector3(activistSpawn.transform.position.x, activistSpawn.transform.position.y, activistSpawn.transform.position.z);
-
-            //Quaternion spawnRotation = Quaternion.identity;
-            //Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
-
-        }
+           GameObject.Find("Game Controller").GetComponent<GameController>().Recruit();
+       }
     }
 
     public void Repair()
     {
-        if (GameObject.Find("Game Controller").GetComponent<Money>().Currency >= 5)
+        if (GameObject.Find("Game Controller").GetComponent<Money>().Currency >= 2)
         {
             if (GoToRepair != null /*&& GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP < 150*/)
             {
-                GameObject.Find("Game Controller").GetComponent<Money>().Currency = GameObject.Find("Game Controller").GetComponent<Money>().Currency - 5;
+                GameObject.Find("Game Controller").GetComponent<Money>().Currency -= 2;
                 GameObject.Find("Game Controller").GetComponent<Money>().Building++;
 
                 // Find the closes building of the camp

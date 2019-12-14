@@ -45,9 +45,9 @@ public class GameController : MonoBehaviour
         citizenCount = 5;
         militarCount = 5;
         roundComparer = 0;
-        //StartCoroutine(SpawnEnemies());
-        //StartCoroutine(SpawnActivists());
-        //StartCoroutine(SpawnCitizens());
+        StartCoroutine(SpawnEnemies());
+        StartCoroutine(SpawnActivists());
+        StartCoroutine(SpawnCitizens());
     }
 
     private void Update()

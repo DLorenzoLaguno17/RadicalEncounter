@@ -22,7 +22,6 @@ public class MilitaryBehaviour : MonoBehaviour
     public bool attackBuilding = false;
     public bool isHurt = false;
 
-
     private void Start()
     {
         look = GetComponent<LookWhereGoing>();
@@ -32,6 +31,7 @@ public class MilitaryBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         // Distance to the closest destroyable building
         float b_distance = Mathf.Infinity;
         GameObject[] buildings = GameObject.FindGameObjectsWithTag("Destroyable");

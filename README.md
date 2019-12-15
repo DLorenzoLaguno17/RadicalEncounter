@@ -36,7 +36,7 @@ The activist agents are the defenders of the place. They will patrol around cert
 The soldiers are the wicked men attacking the village. Their main objective is to arrive to the center of the town, but if they have an encounter with the citizens they will defenitely pursue and attack them. Besides, the military has a high chance of start attacking the different buildings of the map as they go through its streets, harming them and even burning them down.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="900" height="500">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="900" height="450">
 </p>
 
 *Military's behaviour tree*
@@ -61,7 +61,7 @@ The urban center is where most of the action is developed, and there is where al
 The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.png?raw=true" alt="Map" width="900" height="400">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.png?raw=true" alt="Map" width="900" height="450">
 </p>
 
 *Radical Encounter's map*

@@ -16,7 +16,7 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 - **Military:** The wicked men attacking the village.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="700" height="400">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="900" height="550">
 </p>
 
 *Military's behaviour tree*

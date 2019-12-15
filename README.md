@@ -17,11 +17,11 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 - **Outskirts:** The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg" alt="Map" width="450" height="300">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg" alt="Map" width="250" height="100">
 </p>
 
 
-![Map](https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg)
+![Map](https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/A_BT.PNG?raw=true)
 
 *Radical Encounter's map*
 
@@ -53,7 +53,7 @@ All the sound effects used in Radical Encounter have been taken from different v
 * You lost: Dark Souls.
 * You resisted: Civilization VI.
 
-# License
+## License
 
     MIT License
     Copyright (c) 2019 Dani Lorenzo & Jacobo Galofre

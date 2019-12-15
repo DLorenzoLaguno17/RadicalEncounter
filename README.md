@@ -2,7 +2,7 @@ Radical Encounter is a God Game in which the player is in charge of a group of a
 
 <iframe width="600" height="335" src="https://www.youtube.com/embed/9H-NG_e6Kos" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEncounter) or [download](https://github.com/DLorenzoLaguno17/RadicalEncounter/releases) the last version of Radical Encounter!
+Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEncounter) or [download](https://github.com/DLorenzoLaguno17/RadicalEncounter/releases/tag/v0.3) the last version of Radical Encounter!
 
 # Index
 * [About the game](#about-the-game)

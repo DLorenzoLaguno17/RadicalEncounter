@@ -32,22 +32,15 @@ public class ButtonsBehaviour : MonoBehaviour
                 GameObject.Find("Game Controller").GetComponent<Money>().Currency -= 2;
 
                 // Find the closes building of the camp
-                float distance1 = Mathf.Infinity;
-                float distance2 = Mathf.Infinity;
+                float distance = Mathf.Infinity;
                 GameObject[] citizens = GameObject.FindGameObjectsWithTag("Citizens");
 
                 foreach (GameObject currentCitizen in citizens)
                 {
                     float newDistance = (currentCitizen.transform.position - GoToRepair.transform.position).magnitude;
-                    if (newDistance < distance1)
+                    if (newDistance < distance)
                     {
-                        distance1 = newDistance;
-                        currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
-                        currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
-                    }
-                    else if (newDistance < distance2)
-                    {
-                        distance2 = newDistance;
+                        distance = newDistance;
                         currentCitizen.GetComponent<CitizenBehaviour>().buildingToRepair = GoToRepair;
                         currentCitizen.GetComponent<CitizenBehaviour>().mustRepair = true;
                     }

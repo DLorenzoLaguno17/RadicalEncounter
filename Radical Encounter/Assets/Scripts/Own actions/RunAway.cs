@@ -10,6 +10,7 @@ public class RunAway : ActionTask
     {
         citizen = agent.gameObject.GetComponent<CitizenBehaviour>();
         evade = agent.gameObject.GetComponent<Evade>();
+
         return null;
     }
 

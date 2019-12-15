@@ -67,7 +67,11 @@ The outskirts are from where all the enemies will enter the city. There are two 
 *Radical Encounter's map*
 
 ## Game mechanics
-The game consists on resisting a certain number of waves of enemies, and the player succeds if it does not get the camp destroyed and manages to mantain at leass one activist alive until the last day. At the moment one of those conditions fails, the player will loose. Each wave there will be more enemies and that will increase the difficulty as the game goes by. The player interaction with the game consists basically in two different actions:
+The game consists on resisting a certain number of waves of enemies, and the player succeds if it does not get the camp destroyed, manages to mantain at least one activist alive until the last day and the buildings of the town does not go below five. At the moment one of those conditions fails, the player looses. Each wave there are more enemies and that increases the difficulty as the game goes by. 
+
+Each type of character spawns following its own rules. First, as previousaly stated, the soldiers spawn in a higher number each wave. Second, the player starts with five activists, and there will not appear more of them unless they are recruited. To end, the game starts with five citizens, and each round spawn more or less of them depending on how remained from the last one and how much buildings are still standing.
+
+Furthermore, the player interaction with the game consists basically in two different actions:
 
 The first one is **repairing a building**. Since the military may destroy different copnstructions and will wreak havoc through the place, the user will be able to command a couple of activists to repair a building. For that, they must click on a building and then click repair, and the nearest citizen to that building will perform that task.
 

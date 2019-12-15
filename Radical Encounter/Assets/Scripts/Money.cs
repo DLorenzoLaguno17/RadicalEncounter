@@ -11,7 +11,7 @@ public class Money : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Currency = 10;
+        Currency = 5;
         Enemy = 0;
         Ally = 0;
         Citizen = 0;
@@ -27,7 +27,7 @@ public class Money : MonoBehaviour
         Enemies.text = string.Concat("Enemies: ", Enemy.ToString());
         Allies.text = string.Concat("Activists: ", Ally.ToString());
         Citizens.text = string.Concat("Citizens: ", Citizen.ToString());
-        Rounds.text = string.Concat("Day ", Round.ToString(), "/5");
+        Rounds.text = string.Concat("Day ", Round.ToString(), "/6");
         Camps.text = string.Concat("Camp buildings: ", Camp.ToString());
         Buildings.text = string.Concat("Buildings left: ", Building.ToString());
     }

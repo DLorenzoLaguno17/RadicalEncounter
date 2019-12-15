@@ -46,9 +46,9 @@ public class GameController : MonoBehaviour
         citizenCount = 5;
         militarCount = 5;
         roundComparer = 1;
-        StartCoroutine(SpawnEnemies());
-        StartCoroutine(SpawnActivists());
-        StartCoroutine(SpawnCitizens());
+        //StartCoroutine(SpawnEnemies());
+        //StartCoroutine(SpawnActivists());
+        //StartCoroutine(SpawnCitizens());
     }
 
     private void Update()
@@ -152,6 +152,11 @@ public class GameController : MonoBehaviour
                 militarCount = 23;
                 StartCoroutine(SpawnEnemies());
             }
+            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 6)
+            {
+                militarCount = 30;
+                StartCoroutine(SpawnEnemies());
+            }
 
             // Handle citizens
             if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7 > 0)
@@ -171,7 +176,8 @@ public class GameController : MonoBehaviour
     {
         if(GameObject.Find("Game Controller").GetComponent<Money>().Camp <= 0 
             || (GameObject.Find("Game Controller").GetComponent<Money>().Ally <= 0
-            && GameObject.Find("Game Controller").GetComponent<Money>().Round > 1))
+            && GameObject.Find("Game Controller").GetComponent<Money>().Round > 1)
+            || GameObject.Find("Game Controller").GetComponent<Money>().Building < 5)
         {
             // Activate background
             GameObject.Find("UICanvas").transform.GetChild(12).gameObject.SetActive(true);
@@ -194,7 +200,7 @@ public class GameController : MonoBehaviour
 
     public void WinCondition()
     {
-        if (GameObject.Find("Game Controller").GetComponent<Money>().Round >= 5 /*&& GameObject.Find("Game Controller").GetComponent<Money>().Enemy <= 0*/)
+        if (GameObject.Find("Game Controller").GetComponent<Money>().Round >= 6 /*&& GameObject.Find("Game Controller").GetComponent<Money>().Enemy <= 0*/)
         {
             // Activate background
             GameObject.Find("UICanvas").transform.GetChild(12).gameObject.SetActive(true);

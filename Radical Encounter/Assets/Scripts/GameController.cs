@@ -93,7 +93,7 @@ public class GameController : MonoBehaviour
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
 
-            yield return new WaitForSeconds(spawnWait);
+            yield return new WaitForSeconds(5);
         }
     }
 

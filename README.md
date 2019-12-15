@@ -25,6 +25,10 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 ## Game mechanics
 There are no mechanics in this version of the game, only the AI implemnted, performing their routines.
 
+## Controls
+* A - Move the camera clockwise.
+* D - Move the camera counterclockwise.
+
 # Credits
 
 ## Authors of the game

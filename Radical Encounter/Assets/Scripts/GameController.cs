@@ -72,7 +72,7 @@ public class GameController : MonoBehaviour
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(military[Random.Range(0, military.Length)], spawnPosition, spawnRotation);
 
-            yield return new WaitForSeconds(10.0f);
+            yield return new WaitForSeconds(5.0f);
         }
     }
 
@@ -104,9 +104,6 @@ public class GameController : MonoBehaviour
 
         spawnPosition = new Vector3(activistSpawn1.transform.position.x, activistSpawn1.transform.position.y, activistSpawn1.transform.position.z);
         Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
-
-        spawnPosition = new Vector3(activistSpawn5.transform.position.x, activistSpawn5.transform.position.y, activistSpawn5.transform.position.z);
-        Instantiate(activists[Random.Range(0, activists.Length)], spawnPosition, spawnRotation);
     }
 
     IEnumerator SpawnCitizens()
@@ -124,6 +121,7 @@ public class GameController : MonoBehaviour
 
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(citizens[Random.Range(0, citizens.Length)], spawnPosition, spawnRotation);
+            GameObject.Find("Game Controller").GetComponent<Money>().Citizen++;
 
             yield return new WaitForSeconds(spawnWait);
         }
@@ -158,9 +156,11 @@ public class GameController : MonoBehaviour
             // Handle citizens
             if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7 > 0)
                 citizenCount = (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7);
-            else if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen -7 <= 0)
+            else if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7 <= 0)
                 citizenCount = 0;
 
+            citizenCount += GameObject.Find("Game Controller").GetComponent<Money>().Citizen;
+            GameObject.Find("Game Controller").GetComponent<Money>().Citizen = 0;
             StartCoroutine(SpawnCitizens());
 
             roundComparer = GameObject.Find("Game Controller").GetComponent<Money>().Round;
@@ -169,7 +169,9 @@ public class GameController : MonoBehaviour
 
     public void LoseCondition()
     {
-        if(GameObject.Find("Game Controller").GetComponent<Money>().Camp <= 0 /*|| GameObject.Find("Game Controller").GetComponent<Money>().Citizen <= 0*/)
+        if(GameObject.Find("Game Controller").GetComponent<Money>().Camp <= 0 
+            || (GameObject.Find("Game Controller").GetComponent<Money>().Ally <= 0
+            && GameObject.Find("Game Controller").GetComponent<Money>().Round > 1))
         {
             // Activate background
             GameObject.Find("UICanvas").transform.GetChild(12).gameObject.SetActive(true);
@@ -192,7 +194,7 @@ public class GameController : MonoBehaviour
 
     public void WinCondition()
     {
-        if (GameObject.Find("Game Controller").GetComponent<Money>().Round >= 5 && GameObject.Find("Game Controller").GetComponent<Money>().Enemy <= 0)
+        if (GameObject.Find("Game Controller").GetComponent<Money>().Round >= 5 /*&& GameObject.Find("Game Controller").GetComponent<Money>().Enemy <= 0*/)
         {
             // Activate background
             GameObject.Find("UICanvas").transform.GetChild(12).gameObject.SetActive(true);

@@ -14,11 +14,6 @@ public class CitizenBehaviour : MonoBehaviour
     public bool militarSeen = false;
     public AudioClip audio;
 
-    private void Start()
-    {
-        GameObject.Find("Game Controller").GetComponent<Money>().Citizen++;
-    }
-
     // Update is called once per frame
     void Update()
     {

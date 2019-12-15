@@ -30,7 +30,6 @@ public class ButtonsBehaviour : MonoBehaviour
             if (GoToRepair != null /*&& GoToRepair.GetComponentInParent<DestroyableBuildingsBehaviour>().HP < 150*/)
             {
                 GameObject.Find("Game Controller").GetComponent<Money>().Currency -= 2;
-                GameObject.Find("Game Controller").GetComponent<Money>().Building++;
 
                 // Find the closes building of the camp
                 float distance1 = Mathf.Infinity;

@@ -11,7 +11,7 @@ public class Money : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Currency = 15;
+        Currency = 10;
         Enemy = 0;
         Ally = 0;
         Citizen = 0;

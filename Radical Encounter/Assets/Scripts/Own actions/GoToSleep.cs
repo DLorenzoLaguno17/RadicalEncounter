@@ -50,7 +50,7 @@ public class GoToSleep : ActionTask
             distance = point5.transform.position - agent.gameObject.transform.position;
         }
 
-        if (distance.magnitude > citizen.searchingRadius)
+        if (distance.magnitude < 5)
         {
             citizen.DestroyThis();
             EndAction(true);

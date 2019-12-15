@@ -7,13 +7,18 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 # Index
 * [About the game](#about-the-game)
     * [Characters](#characters)
-    * [The relation of the TDD with the GDD](#the-relation-of-the-TDD-with-the-GDD)
+      * [Activists](#activists)
+      * [Military](#military)
+      * [Citizens](#citizens)
     * [Areas](#areas)
+      * [Camp](#camp)
+      * [Urban center](#urban-center)
+      * [Outskirts](#outskirts)
     * [Game mechanics](#game-mechanics)
 * [Credits](#credits)
     * [Authors of the game](#authors-of-the-game)    
     * [Music](#music)    
-    * [Sound effects](#sound effects)
+    * [Sound effects](#sound-effects)
 * [License](#license)
 
 # About the game
@@ -62,7 +67,11 @@ The outskirts are from where all the enemies will enter the city. There are two 
 *Radical Encounter's map*
 
 ## Game mechanics
-There are no mechanics in this version of the game, only the AI implemnted, performing their routines.
+The game consists on resisting a certain number of waves of enemies, and the player succeds if it does not get the camp destroyed and manages to mantain at leass one activist alive until the last day. At the moment one of those conditions fails, the player will loose. Each wave there will be more enemies and that will increase the difficulty as the game goes by. The player interaction with the game consists basically in two different actions:
+
+The first one is **repairing a building**. Since the military may destroy different copnstructions and will wreak havoc through the place, the user will be able to command a couple of activists to repair a building. For that, they must click on a building and then click repair, and the nearest citizen to that building will perform that task.
+
+The second action is **recruiting another activist**. Due to the continuous waves of enemies, there will be needed a source of people to defense the town, so the player will be able of recruiting activists that will ally to the cause by an specific amount of money.
 
 The player can also move the camera:
 * A - Move it clockwise.

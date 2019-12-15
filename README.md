@@ -4,24 +4,40 @@ infrastructure of the place, so you will have both to assist the people and repa
 
 Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEncounter) or [download](https://github.com/DLorenzoLaguno17/RadicalEncounter/releases) the last version of Radical Encounter!
 
+# Index
+* [About the game](#about-the-game)
+    * [Characters](#characters)
+    * [The relation of the TDD with the GDD](#the-relation-of-the-TDD-with-the-GDD)
+    * [Areas](#areas)
+    * [Game mechanics](#game-mechanics)
+* [Credits](#credits)
+    * [Authors of the game](#authors-of-the-game)    
+    * [Music](#music)    
+    * [Sound effects](#sound effects)
+* [License](#license)
+
 # About the game
 
 ## Characters
-- **Activists:** They are the defenders of the place.
+
+### Activists
+The activist agents are the defenders of the place. They will patrol around certain zones of the map, watching for possible threads. If they see a soldier attacking a citizen they will come in their aid, but if they are badly hurt they will retire to the ase camp to get healed from their wounds.
 
 ![Map](https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/A_BT.PNG?raw=true)
 
 *Activists' behaviour tree*
 
-- **Military:** The wicked men attacking the village.
+### Military
+The soldiers are the wicked men attacking the village. Their main objective is to arrive to the center of the town, but if they have an encounter with the citizens they will defenitely pursue and attack them. Besides, the military has a high chance of start attacking the different buildings of the map as they go through its streets, harming them and even burning them down.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="900" height="550">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="900" height="500">
 </p>
 
 *Military's behaviour tree*
 
-- **Citizens:** Simple people trying to live a normal live.
+### Citizens
+The villagers are simple people trying to live a normal live. They will try to have a walk around the streets of their lovely town, but in case they see an enemy they will flee. Besides, if the player needs to repair a building, the two of them nearest to it will have to aproach in order to repair it. There is also a small chance for them to join the activists at the end of every day.
 
 <p align="center">
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/C_BT.PNG?raw=true" alt="Citizen BT" width="450" height="500">
@@ -30,24 +46,27 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 *Citizens' behaviour tree*
 
 ## Areas
-- **Camp:** The camp is the safest area of the town. In it, there are all the hospital tents and the majority of the activist forces, and it is the most important place if they want to survive. It must be kept safe from the enemy at all cost.
-- **Urban center:** The urban center is where most of the action is developed, and there is where all three different types of characters interact with each other.
-- **Outskirts:** The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
+### Camp
+The camp is the safest area of the town. In it, there are all the hospital tents and the majority of the activist forces, and it is the most important place if they want to survive. It must be kept safe from the enemy at all cost.
+
+### Urban center
+The urban center is where most of the action is developed, and there is where all three different types of characters interact with each other.
+
+### Outskirts
+The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
 <p align="center">
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg" alt="Map" width="250" height="100">
 </p>
-
-
 
 *Radical Encounter's map*
 
 ## Game mechanics
 There are no mechanics in this version of the game, only the AI implemnted, performing their routines.
 
-## Controls
-* A - Move the camera clockwise.
-* D - Move the camera counterclockwise.
+The player can also move the camera:
+* A - Move it clockwise.
+* D - Move it counterclockwise.
 
 # Credits
 
@@ -70,7 +89,7 @@ All the sound effects used in Radical Encounter have been taken from different v
 * You lost: Dark Souls.
 * You resisted: Civilization VI.
 
-## License
+# License
 
     MIT License
     Copyright (c) 2019 Dani Lorenzo & Jacobo Galofre
@@ -88,3 +107,5 @@ All the sound effects used in Radical Encounter have been taken from different v
     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
     CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
     DEALINGS IN THE SOFTWARE.
+
+Go [back to top](#index).

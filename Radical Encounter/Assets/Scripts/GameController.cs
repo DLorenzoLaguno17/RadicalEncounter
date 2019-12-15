@@ -46,9 +46,9 @@ public class GameController : MonoBehaviour
         citizenCount = 5;
         militarCount = 5;
         roundComparer = 1;
-        //StartCoroutine(SpawnEnemies());
-        //StartCoroutine(SpawnActivists());
-        //StartCoroutine(SpawnCitizens());
+        StartCoroutine(SpawnEnemies());
+        StartCoroutine(SpawnActivists());
+        StartCoroutine(SpawnCitizens());
     }
 
     private void Update()
@@ -159,9 +159,9 @@ public class GameController : MonoBehaviour
             }
 
             // Handle citizens
-            if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7 > 0)
-                citizenCount = (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7);
-            else if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7 <= 0)
+            if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 5 > 0)
+                citizenCount = (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 5);
+            else if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 5 <= 0)
                 citizenCount = 0;
 
             citizenCount += GameObject.Find("Game Controller").GetComponent<Money>().Citizen;

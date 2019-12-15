@@ -28,7 +28,7 @@ public class Money : MonoBehaviour
         Allies.text = string.Concat("Activists: ", Ally.ToString());
         Citizens.text = string.Concat("Citizens: ", Citizen.ToString());
         Rounds.text = string.Concat("Day ", Round.ToString(), "/5");
-        Camps.text = string.Concat("Camps left: ", Camp.ToString());
+        Camps.text = string.Concat("Camp buildings: ", Camp.ToString());
         Buildings.text = string.Concat("Buildings left: ", Building.ToString());
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -171,30 +172,53 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void WinCondition()
+    public void LoseCondition()
     {
         if(GameObject.Find("Game Controller").GetComponent<Money>().Camp <= 0)
         {
-            GameObject Lose = GameObject.Find("You Lose");
-            GameObject bg = GameObject.Find("bg (3)");
-            GameObject btn = GameObject.Find("Main Menu");
-            Lose.SetActive(true);
-            bg.SetActive(true);
-            btn.SetActive(true);
+            // Activate background
+            GameObject.Find("UICanvas").transform.GetChild(12).gameObject.SetActive(true);
+
+            // Activate main menu
+            GameObject.Find("UICanvas").transform.GetChild(13).gameObject.SetActive(true);
+
+            // Activate "You Lose"
+            GameObject.Find("UICanvas").transform.GetChild(15).gameObject.SetActive(true);
+
+            DisableUI();
         }
     }
 
-    public void LoseCondition()
+    public void WinCondition()
     {
         if (GameObject.Find("Game Controller").GetComponent<Money>().Round >= 5 && GameObject.Find("Game Controller").GetComponent<Money>().Enemy <= 0)
         {
-            GameObject Win = GameObject.Find("You Win");
-            GameObject bg = GameObject.Find("bg (3)");
-            GameObject btn = GameObject.Find("Main Menu");
-            Win.SetActive(true);
-            bg.SetActive(true);
-            btn.SetActive(true);
+            // Activate background
+            GameObject.Find("UICanvas").transform.GetChild(12).gameObject.SetActive(true);
+
+            // Activate main menu
+            GameObject.Find("UICanvas").transform.GetChild(13).gameObject.SetActive(true);
+
+            // Activate "You Win"
+            GameObject.Find("UICanvas").transform.GetChild(14).gameObject.SetActive(true);
+
+            DisableUI();
         }
     }
 
+    void DisableUI()
+    {
+        GameObject.Find("UICanvas").transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(1).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(2).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(3).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(4).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(5).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(6).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(7).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(8).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(9).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(10).gameObject.SetActive(false);
+        GameObject.Find("UICanvas").transform.GetChild(11).gameObject.SetActive(false);
+    }
 }

@@ -61,7 +61,7 @@ The urban center is where most of the action is developed, and there is where al
 The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.png?raw=true" alt="Map" width="900" height="750">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.png?raw=true" alt="Map" width="900" height="600">
 </p>
 
 *Radical Encounter's map*
@@ -87,7 +87,7 @@ The player can also move the camera:
 This game has been developed by two third course students of the  [Bachelor's Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/ing/estudis/graus-videojocs/), [Daniel Lorenzo](https://www.linkedin.com/in/daniel-lorenzo-laguno-a2ab35180/) & [Jacobo Galofre](https://www.linkedin.com/in/jgalofre/).
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Members.PNG?raw=true" alt="Members" width="400" height="320">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Members.PNG?raw=true" alt="Members" width="450" height="320">
 </p>
 
 *At the left Jacobo Galofre, at the right, Daniel Lorenzo*

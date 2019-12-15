@@ -20,6 +20,9 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg" alt="Map" width="450" height="300">
 </p>
 
+
+![Map](https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpeg)
+
 *Radical Encounter's map*
 
 ## Game mechanics
@@ -45,8 +48,8 @@ License: CC BY (http://creativecommons.org/licenses/by/4.0/)
 
 ## Sound effects
 All the sound effects used in Radical Encounter have been taken from different videogames:
-* Hurt soldier: Minecraft.
-* Hurt activist / citizen: Super Smash Bros (from Link).
+* Soldier hurt: Minecraft.
+* Activist / citizen hurt: Super Smash Bros (from Link).
 * You lost: Dark Souls.
 * You resisted: Civilization VI.
 
@@ -55,8 +58,16 @@ All the sound effects used in Radical Encounter have been taken from different v
     MIT License
     Copyright (c) 2019 Dani Lorenzo & Jacobo Galofre
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+    documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
+    and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions 
+    of the Software.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+    CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.

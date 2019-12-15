@@ -1,5 +1,7 @@
 Radical Encounter is a God Game in which the player is in charge of a group of activists that are defending their little village against a series of different enemy soldiers which will try to subdue your fellow citizens and friends. Those evil soldiers are going to attack them and also damage the buildings and the infrastructure of the place, so you will have both to assist the people and repair the patrimony, all with the help of the resources you will acquire by slaining and saving your comrades. 
 
+<iframe width="850" height="480" src="https://www.youtube.com/watch?v=ruZ1CMWbu4c&feature=youtu.be" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEncounter) or [download](https://github.com/DLorenzoLaguno17/RadicalEncounter/releases) the last version of Radical Encounter!
 
 # Index
@@ -20,7 +22,7 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 * [License](#license)
 
 # About the game
-Radical encounter has been developed uisng Unity and C#, along with the NodeCanvas extension. Through the different stages of its creation we have used both visual programming and scripting.
+Radical Encounter has been developed uisng Unity and C#, along with the NodeCanvas extension. Through the different stages of its creation we have used both visual programming and scripting.
 
 ## Characters
 

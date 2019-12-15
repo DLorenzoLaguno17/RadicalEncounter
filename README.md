@@ -61,7 +61,7 @@ The urban center is where most of the action is developed, and there is where al
 The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.png?raw=true" alt="Map" width="900" height="500">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.png?raw=true" alt="Map" width="900" height="350">
 </p>
 
 *Radical Encounter's map*

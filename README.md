@@ -11,23 +11,23 @@ Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEnc
 
 ![Map](https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/A_BT.PNG?raw=true)
 
-* Activists' behaviour tree*
+*Activists' behaviour tree*
 
 - **Military:** The wicked men attacking the village.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="650" height="300">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="700" height="400">
 </p>
 
-* Military's behaviour tree*
+*Military's behaviour tree*
 
 - **Citizens:** Simple people trying to live a normal live.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/C_BT.PNG?raw=true" alt="Citizen BT" width="400" height="500">
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/C_BT.PNG?raw=true" alt="Citizen BT" width="450" height="500">
 </p>
 
-* Citizens' behaviour tree*
+*Citizens' behaviour tree*
 
 ## Areas
 - **Camp:** The camp is the safest area of the town. In it, there are all the hospital tents and the majority of the activist forces, and it is the most important place if they want to survive. It must be kept safe from the enemy at all cost.

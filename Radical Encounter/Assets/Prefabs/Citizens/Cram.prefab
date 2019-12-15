@@ -770,6 +770,7 @@ MonoBehaviour:
   buildingToRepair: {fileID: 0}
   searchingRadius: 35
   militarSeen: 0
+  audio: {fileID: 8300000, guid: 9ab2429f0a5917648b22b92bc920b690, type: 3}
 --- !u!114 &721112164894913965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,7 +836,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9ab2429f0a5917648b22b92bc920b690, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

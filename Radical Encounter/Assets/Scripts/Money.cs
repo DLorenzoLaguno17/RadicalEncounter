@@ -15,7 +15,7 @@ public class Money : MonoBehaviour
         Enemy = 0;
         Ally = 0;
         Citizen = 0;
-        Round = 0;
+        Round = 1;
         Camp = 6;
         Building = 15;
     }

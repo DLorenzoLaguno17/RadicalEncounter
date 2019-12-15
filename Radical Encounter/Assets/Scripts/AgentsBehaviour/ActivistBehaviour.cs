@@ -67,6 +67,8 @@ public class ActivistBehaviour : MonoBehaviour
             Destroy(other.gameObject);
             life -= 15;
 
+            gameObject.GetComponent<AudioSource>().Play();
+
             if (life <= 0)
             {
                 GameObject.Find("Game Controller").GetComponent<Money>().Ally--;

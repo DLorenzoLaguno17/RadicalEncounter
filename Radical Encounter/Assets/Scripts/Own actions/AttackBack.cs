@@ -16,12 +16,8 @@ public class AttackBack : ActionTask
         military = agent.gameObject.GetComponent<MilitaryBehaviour>();
         movement = agent.gameObject.GetComponent<MovementManager>();
         look = agent.gameObject.GetComponent<LookWhereGoing>();
-        return null;
-    }
 
-    protected override void OnExecute()
-    {
-        
+        return null;
     }
 
     protected override void OnUpdate()
@@ -43,21 +39,23 @@ public class AttackBack : ActionTask
             activistNear = true;
         else activistNear = false;
 
-        agent.gameObject.transform.LookAt(military.closestTarget.transform.position);
-        look.enabled = false;
-        movement.SetMovementVelocity(Vector3.zero);
+        if (military.closestTarget != null) {
+            agent.gameObject.transform.LookAt(military.closestTarget.transform.position);
+            look.enabled = false;
+            movement.SetMovementVelocity(Vector3.zero);
 
-        if (Time.time >= nextShotTime)
-        {
-            nextShotTime = Time.time + shotDelay;
-            military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
-        }
+            if (Time.time >= nextShotTime)
+            {
+                nextShotTime = Time.time + shotDelay;
+                military.ShootBullets(military.shot, military.shotSpawn.position, military.shotSpawn.rotation);
+            }
 
-        if (activistNear == false)
-        {
-            military.isHurt = false;
-            EndAction(false);
+            if (activistNear == false)
+            {
+                military.isHurt = false;
+                EndAction(false);
+            }
+            else EndAction(true);
         }
-        else EndAction(true);
     }
 }

@@ -37,17 +37,18 @@ public class GameController : MonoBehaviour
     public float startWait;
     public float spawnWait;
 
-    public int roundComparer;
+    int roundComparer;
+    bool playSound = true;
 
     // Start is called before the first frame update
     void Start()
     {
         citizenCount = 5;
         militarCount = 5;
-        roundComparer = 0;
-        //StartCoroutine(SpawnEnemies());
-        //StartCoroutine(SpawnActivists());
-        //StartCoroutine(SpawnCitizens());
+        roundComparer = 1;
+        StartCoroutine(SpawnEnemies());
+        StartCoroutine(SpawnActivists());
+        StartCoroutine(SpawnCitizens());
     }
 
     private void Update()
@@ -130,37 +131,31 @@ public class GameController : MonoBehaviour
 
     void RoundControl()
     {
-       if(roundComparer != GameObject.Find("Game Controller").GetComponent<Money>().Round)
-        {
-
+       if(roundComparer != GameObject.Find("Game Controller").GetComponent<Money>().Round) {
+            
             //Handle enemies
-            if(GameObject.Find("Game Controller").GetComponent<Money>().Round == 1)
+            if(GameObject.Find("Game Controller").GetComponent<Money>().Round == 2)
             {
                 militarCount = 8;
                 StartCoroutine(SpawnEnemies());
             }
-            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 2)
+            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 3)
             {
                 militarCount = 12;
                 StartCoroutine(SpawnEnemies());
             }
-            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 3)
+            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 4)
             {
                 militarCount = 17;
                 StartCoroutine(SpawnEnemies());
             }
-            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 4)
+            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 5)
             {
                 militarCount = 23;
                 StartCoroutine(SpawnEnemies());
             }
-            else if (GameObject.Find("Game Controller").GetComponent<Money>().Round == 5)
-            {
-                militarCount = 27;
-                StartCoroutine(SpawnEnemies());
-            }
 
-            //Handle citizens
+            // Handle citizens
             if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7 > 0)
                 citizenCount = (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen - 7);
             else if (GameObject.Find("Game Controller").GetComponent<Money>().Building - GameObject.Find("Game Controller").GetComponent<Money>().Citizen -7 <= 0)
@@ -174,7 +169,7 @@ public class GameController : MonoBehaviour
 
     public void LoseCondition()
     {
-        if(GameObject.Find("Game Controller").GetComponent<Money>().Camp <= 0)
+        if(GameObject.Find("Game Controller").GetComponent<Money>().Camp <= 0 /*|| GameObject.Find("Game Controller").GetComponent<Money>().Citizen <= 0*/)
         {
             // Activate background
             GameObject.Find("UICanvas").transform.GetChild(12).gameObject.SetActive(true);
@@ -184,6 +179,12 @@ public class GameController : MonoBehaviour
 
             // Activate "You Lose"
             GameObject.Find("UICanvas").transform.GetChild(15).gameObject.SetActive(true);
+
+            if (playSound)
+            {
+                GameObject.Find("UICanvas").transform.GetChild(15).gameObject.GetComponent<AudioSource>().Play();
+                playSound = false;
+            }
 
             DisableUI();
         }
@@ -201,6 +202,12 @@ public class GameController : MonoBehaviour
 
             // Activate "You Win"
             GameObject.Find("UICanvas").transform.GetChild(14).gameObject.SetActive(true);
+
+            if (playSound)
+            {
+                GameObject.Find("UICanvas").transform.GetChild(14).gameObject.GetComponent<AudioSource>().Play();
+                playSound = false;
+            }
 
             DisableUI();
         }

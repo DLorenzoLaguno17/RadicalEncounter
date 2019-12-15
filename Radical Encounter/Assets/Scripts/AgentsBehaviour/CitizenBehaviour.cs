@@ -12,6 +12,7 @@ public class CitizenBehaviour : MonoBehaviour
     public GameObject buildingToRepair;
     public int searchingRadius = 10;
     public bool militarSeen = false;
+    public AudioClip audio;
 
     private void Start()
     {
@@ -49,6 +50,9 @@ public class CitizenBehaviour : MonoBehaviour
         {
             Destroy(other.gameObject);
             life -= 15;
+
+            gameObject.GetComponent<AudioSource>().clip = audio;
+            gameObject.GetComponent<AudioSource>().Play();
 
             if (life <= 0)
             {

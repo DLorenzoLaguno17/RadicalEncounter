@@ -1,6 +1,8 @@
 Radical Encounter is a God Game in which the player is in charge of a group of activists that are defending their little village against a series of different enemy soldiers which will try to subdue your fellow citizens and friends. Those evil soldiers are going to attack them and also damage the buildings and the infrastructure of the place, so you will have both to assist the people and repair the patrimony, all with the help of the resources you will acquire by slaining and saving your comrades.
 
-<iframe width="600" height="335" src="https://www.youtube.com/embed/9H-NG_e6Kos" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p align="center">
+  <iframe width="600" height="335" src="https://www.youtube.com/embed/9H-NG_e6Kos" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 Check out our [GitHub repository](https://github.com/DLorenzoLaguno17/RadicalEncounter) or [download](https://github.com/DLorenzoLaguno17/RadicalEncounter/releases/tag/v0.3) the last version of Radical Encounter!
 
@@ -30,7 +32,7 @@ Radical Encounter has been developed uisng Unity and C#, along with the NodeCanv
 The activist agents are the defenders of the place. They will patrol around certain zones of the map, watching for possible threads. If they see a soldier attacking a citizen they will come in their aid, but if they are badly hurt they will retire to the ase camp to get healed from their wounds.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/A_BT.PNG?raw=true" alt="Activists BT" width="900" height="450"/>
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/A_BT.jpg?raw=true" alt="Activists BT" width="900" height="450"/>
 </p>
 
 *Activists' behaviour tree*
@@ -39,7 +41,7 @@ The activist agents are the defenders of the place. They will patrol around cert
 The soldiers are the wicked men attacking the village. Their main objective is to arrive to the center of the town, but if they have an encounter with the citizens they will defenitely pursue and attack them. Besides, the military has a high chance of start attacking the different buildings of the map as they go through its streets, harming them and even burning them down.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.PNG?raw=true" alt="Military BT" width="900" height="450"/>
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.jpg?raw=true" alt="Military BT" width="900" height="450"/>
 </p>
 
 *Military's behaviour tree*
@@ -48,7 +50,7 @@ The soldiers are the wicked men attacking the village. Their main objective is t
 The villagers are simple people trying to live a normal live. They will try to have a walk around the streets of their lovely town, but in case they see an enemy they will flee. Besides, if the player needs to repair a building, the two of them nearest to it will have to aproach in order to repair it. There is also a small chance for them to join the activists at the end of every day.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/C_BT.PNG?raw=true" alt="Citizen BT" width="450" height="500"/>
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/C_BT.jpg?raw=true" alt="Citizen BT" width="450" height="500"/>
 </p>
 
 *Citizens' behaviour tree*
@@ -64,7 +66,7 @@ The urban center is where most of the action is developed, and there is where al
 The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.png?raw=true" alt="Map" width="900" height="450"/>
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpg?raw=true" alt="Map" width="900" height="450"/>
 </p>
 
 *Radical Encounter's map*
@@ -90,7 +92,7 @@ The player can also move the camera:
 This game has been developed by two third course students of the  [Bachelor's Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/ing/estudis/graus-videojocs/), [Daniel Lorenzo](https://www.linkedin.com/in/daniel-lorenzo-laguno-a2ab35180/) & [Jacobo Galofre](https://www.linkedin.com/in/jgalofre/).
 
 <p align="center">
-  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Members.PNG?raw=true" alt="Members" width="450" height="320"/>
+  <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Members.jpg?raw=true" alt="Members" width="450" height="320"/>
 </p>
 
 *At the left Jacobo Galofre, at the right, Daniel Lorenzo*

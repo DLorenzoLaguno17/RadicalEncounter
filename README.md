@@ -29,7 +29,7 @@ Radical Encounter has been developed uisng Unity and C#, along with the NodeCanv
 ## Characters
 
 ### Activists
-The activist agents are the defenders of the place. They will patrol around certain zones of the map, watching for possible threads. If they see a soldier attacking a citizen they will come in their aid, but if they are badly hurt they will retire to the base camp to get healed from their wounds.
+The activist agents are the defenders of the place. They will patrol around certain zones of the map, watching out for possible threats. If they see a soldier attacking a citizen they will come in their aid, but if they are badly hurt they will retire to the base camp to get healed from their wounds.
 
 <p align="center">
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/A_BT.jpg?raw=true" alt="Activists BT" width="900" height="450"/>
@@ -38,7 +38,7 @@ The activist agents are the defenders of the place. They will patrol around cert
 *Activists' behaviour tree*
 
 ### Military
-The soldiers are the wicked men attacking the village. Their main objective is to arrive to the center of the town, but if they have an encounter with the citizens they will defenitely pursue and attack them. Besides, the military has a high chance of start attacking the different buildings of the map as they go through its streets, harming them and even burning them down.
+The soldiers are the wicked men attacking the village. Their main objective is to arrive to the center of the town, but if they have encounter any citizens they will immediately pursue and attack them. Besides, the military has a high chance of start attacking the different buildings of the map as they go through its streets, harming them and even burning them down.
 
 <p align="center">
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/M_BT.jpg?raw=true" alt="Military BT" width="900" height="450"/>

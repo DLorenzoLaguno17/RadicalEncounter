@@ -47,7 +47,7 @@ The soldiers are the wicked men attacking the village. Their main objective is t
 *Military's behaviour tree*
 
 ### Citizens
-The villagers are simple people trying to live a normal live. They will try to have a walk around the streets of their lovely town, but in case they see an enemy they will flee. Besides, if the player needs to repair a building, the two of them nearest to it will have to aproach in order to repair it. There is also a small chance for them to join the activists at the end of every day.
+The villagers are simple people trying to live a normal live. They will try to have a walk around the streets of their lovely town, but in case they see an enemy they will flee. Besides, if the player needs to repair a building, the two of them nearest to it will have to aproach it in order to repair it. There is also a small chance for them to join the activists at the end of every day.
 
 <p align="center">
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/C_BT.jpg?raw=true" alt="Citizen BT" width="450" height="500"/>

@@ -63,7 +63,7 @@ The camp is the safest area of the town. In it, there are all the hospital tents
 The urban center is where most of the action is developed, and there is where all three different types of characters interact with each other.
 
 ### Outskirts
-The outskirts are from where all the enemies will enter the city. There are two different accesses, one of the north of the city and the other at its south.
+The outskirts are from where all the enemies will enter the city. There are two different accesses, one at the north of the city and the other at its south.
 
 <p align="center">
   <img src="https://github.com/DLorenzoLaguno17/RadicalEncounter/blob/master/Images/Map.jpg?raw=true" alt="Map" width="900" height="450"/>
@@ -72,15 +72,15 @@ The outskirts are from where all the enemies will enter the city. There are two 
 *Radical Encounter's map*
 
 ## Game mechanics
-The game consists on resisting a certain number of waves of enemies, and the player succeds if it does not get the camp destroyed, manages to mantain at least one activist alive until the last day and the buildings of the town does not go below five. At the moment one of those conditions fails, the player looses. Each wave there are more enemies and that increases the difficulty as the game goes by. 
+The game consists on resisting a certain number of waves of enemies, and the player succeds if it does not get the camp destroyed, manages to mantain at least one activist alive until the last day and the buildings of the town do not go below five. At the moment one of those conditions fails, the player loses. Each wave there are more enemies and that increases the difficulty as the game goes by. 
 
-Each type of character spawns following its own rules. First, as previousaly stated, the soldiers spawn in a higher number each wave. Second, the player starts with five activists, and there will not appear more of them unless they are recruited. To end, the game starts with five citizens, and each round spawn more or less of them depending on how remained from the last one and how much buildings are still standing.
+Each type of character spawns following its own rules. First, as previousaly stated, the soldiers spawn in a higher number each wave. Second, the player starts with five activists, and there will not appear more of them unless they are recruited. To end, the game starts with five citizens, and each round spawn more or less of them depending on how many of them remained from the last one and how many buildings are still standing.
 
-Furthermore, the player interaction with the game consists basically in two different actions:
+Furthermore, the interaction of the player with the game consists basically in two different actions:
 
-The first one is **repairing a building**. Since the military may destroy different copnstructions and will wreak havoc through the place, the user will be able to command a couple of activists to repair a building. For that, they must click on a building and then click repair, and the nearest citizen to that building will perform that task.
+The first one is **repairing a building**. Since the military may destroy different constructions and will wreak havoc throughout the place, the user will be order the reconstruction of a building. For that, they must click on a building and then click repair, and the nearest citizen to that building will perform that task.
 
-The second action is **recruiting another activist**. Due to the continuous waves of enemies, there will be needed a source of people to defense the town, so the player will be able of recruiting activists that will ally to the cause by an specific amount of money.
+The second action is **recruiting another activist**. Due to the continuous waves of enemies, there will be needed a source of people to defense the town, so the player will be able to recruit activists that will ally to the cause, for a specific amount of money.
 
 The player can also move the camera:
 * A - Move it clockwise.
